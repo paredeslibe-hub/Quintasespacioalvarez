@@ -916,6 +916,63 @@
     height: 460px;
   }
   .mapa-wrap iframe { width: 100%; height: 100%; border: 0; display: block; }
+  .video-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--verde-medio);
+    font-size: 15px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+    font-family: inherit;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: color .2s;
+  }
+  .video-link:hover { color: var(--verde-oscuro); }
+  .video-link svg { flex-shrink: 0; }
+  /* Modal de video */
+  .video-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.88);
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+  }
+  .video-modal.open { display: flex; }
+  .video-modal-inner {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #000;
+  }
+  .video-modal video { width: 100%; display: block; max-height: 80vh; }
+  .video-modal-close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: rgba(0,0,0,0.6);
+    border: none;
+    color: white;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    z-index: 1;
+  }
+  .video-modal-close:hover { background: rgba(0,0,0,0.9); }
 
   /* ───── FOOTER ───── */
   footer {
@@ -1498,8 +1555,14 @@
     <span class="eyebrow">Ubicación</span>
     <h2 class="section-title">Cómo <em>llegar</em></h2>
     <p class="como-llegar-sub">
-      Alcorta 531, General Rodríguez, Buenos Aires &nbsp;·&nbsp;
+      Alcorta 531, Francisco Álvarez km 44, General Rodríguez, Buenos Aires &nbsp;·&nbsp;
       <a href="https://www.google.com/maps/place/Alcorta+531,+B1748+General+Rodr%C3%ADguez,+Provincia+de+Buenos+Aires,+Argentina/@-34.5955114,-58.8790449,17z" target="_blank" rel="noopener">Abrir en Google Maps →</a>
+    </p>
+    <p style="margin-bottom: 40px;">
+      <button class="video-link" onclick="document.getElementById('modalLlegar').classList.add('open')">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8" fill="currentColor" stroke="none"/></svg>
+        Mirá el video para saber cómo llegar
+      </button>
     </p>
     <div class="mapa-wrap">
       <iframe
@@ -1624,6 +1687,31 @@
       track.appendChild(slide.cloneNode(true));
     });
   })();
+</script>
+
+<!-- Modal video cómo llegar -->
+<div class="video-modal" id="modalLlegar" onclick="if(event.target===this){cerrarModal()}">
+  <div class="video-modal-inner">
+    <button class="video-modal-close" onclick="cerrarModal()" aria-label="Cerrar">&#x2715;</button>
+    <video id="videoLlegar" controls playsinline>
+      <source src="assets/01-como-llegar.mp4" type="video/mp4">
+    </video>
+  </div>
+</div>
+<script>
+  function cerrarModal() {
+    const modal = document.getElementById('modalLlegar');
+    const video = document.getElementById('videoLlegar');
+    modal.classList.remove('open');
+    video.pause();
+    video.currentTime = 0;
+  }
+  document.getElementById('modalLlegar').addEventListener('click', function(e) {
+    if (e.target === this) cerrarModal();
+  });
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') cerrarModal();
+  });
 </script>
 
 </body>
