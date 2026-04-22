@@ -1,0 +1,1584 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quintas Espacio Álvarez — Eventos en Francisco Álvarez</title>
+<meta name="description" content="Quinta para eventos en Francisco Álvarez. Naturaleza, piscina, quincho y arquitectura contemporánea en 4.000 m² a 44 km de CABA.">
+<link rel="icon" href="assets/logo.png" type="image/png">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --verde-oscuro: #1C3A2A;
+    --verde-medio: #2D5A3D;
+    --verde-salvia: #5C7A5E;
+    --verde-claro: #A8C5A0;
+    --verde-menta: #D4E8D0;
+    --crema-profundo: #F5F0E8;
+    --crema-claro: #FAF7F2;
+    --crema-dorado: #E8DCC8;
+    --dorado: #B8965A;
+    --dorado-claro: #D4B07A;
+    --texto-oscuro: #1A2620;
+    --texto-medio: #3D4F45;
+    --texto-suave: #2C3E35;
+    --wa: #25D366;
+  }
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Quicksand', system-ui, sans-serif;
+    background: var(--crema-claro);
+    color: var(--texto-oscuro);
+    font-size: 16px;
+    line-height: 1.7;
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  img, video { max-width: 100%; display: block; }
+  a { color: inherit; text-decoration: none; }
+
+  /* ───── UTILITIES ───── */
+  .serif { font-family: 'Cormorant Garamond', serif; font-weight: 300; }
+  .eyebrow {
+    font-size: 11px;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: var(--dorado);
+  }
+  .divider {
+    width: 60px; height: 1px;
+    background: var(--dorado);
+    border: 0;
+  }
+  .container {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+
+  /* ───── NAV ───── */
+  .nav {
+    position: fixed; top: 0; left: 0; right: 0;
+    z-index: 50;
+    padding: 18px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: background .4s ease, padding .3s ease, border-color .4s ease;
+    border-bottom: 1px solid transparent;
+  }
+  .nav.scrolled {
+    background: rgba(245, 240, 232, 0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 12px 32px;
+    border-bottom-color: rgba(184, 150, 90, 0.18);
+  }
+  .nav-brand { display: flex; align-items: center; gap: 12px; }
+  .nav-brand img { width: 42px; height: 42px; border-radius: 50%; object-fit: cover; background: var(--crema-profundo); }
+  .nav-brand-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    color: var(--crema-claro);
+    line-height: 1;
+    letter-spacing: 0.02em;
+  }
+  .nav.scrolled .nav-brand-text { color: var(--verde-oscuro); }
+  .nav-brand-text small {
+    display: block;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 9.5px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--verde-claro);
+    font-weight: 400;
+    margin-top: 4px;
+  }
+  .nav.scrolled .nav-brand-text small { color: var(--verde-medio); }
+  .nav-brand-text strong { font-size: 18px; font-weight: 500; }
+
+  .nav-links { display: flex; gap: 32px; align-items: center; }
+  .nav-links a {
+    font-size: 12px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: rgba(250,247,242,0.85);
+    font-weight: 400;
+    position: relative;
+    padding: 6px 0;
+    transition: color .3s;
+  }
+  .nav.scrolled .nav-links a { color: var(--texto-suave); }
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0;
+    height: 1px; width: 0;
+    background: var(--dorado);
+    transition: width .3s ease;
+  }
+  .nav-links a:hover { color: var(--dorado); }
+  .nav-links a:hover::after { width: 100%; }
+
+  .nav-cta {
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    padding: 10px 22px;
+    border: 1px solid var(--dorado);
+    color: var(--dorado);
+    border-radius: 2px;
+    transition: all .3s;
+    font-weight: 500;
+  }
+  .nav-cta:hover { background: var(--dorado); color: var(--crema-claro); }
+
+  .nav-burger { display: none; background: transparent; border: 0; width: 28px; height: 22px; position: relative; cursor: pointer; }
+  .nav-burger span { position: absolute; left: 0; right: 0; height: 1.5px; background: var(--crema-claro); transition: all .3s; }
+  .nav.scrolled .nav-burger span { background: var(--verde-oscuro); }
+  .nav-burger span:nth-child(1) { top: 4px; }
+  .nav-burger span:nth-child(2) { top: 50%; transform: translateY(-50%); }
+  .nav-burger span:nth-child(3) { bottom: 4px; }
+
+  /* ───── HERO ───── */
+  .hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    color: var(--crema-claro);
+    text-align: center;
+    padding: 120px 24px 80px;
+  }
+  .hero-video {
+    position: absolute; inset: 0;
+    width: 100%; height: 100%;
+    object-fit: cover;
+    z-index: 0;
+  }
+  .hero-overlay {
+    position: absolute; inset: 0;
+    background:
+      linear-gradient(180deg, rgba(28,58,42,0.55) 0%, rgba(28,58,42,0.35) 40%, rgba(28,58,42,0.85) 100%);
+    z-index: 1;
+  }
+  .hero-inner { position: relative; z-index: 2; max-width: 900px; }
+  .hero-eyebrow {
+    color: var(--verde-claro);
+    margin-bottom: 28px;
+    display: inline-flex;
+    gap: 16px;
+    align-items: center;
+  }
+  .hero-eyebrow::before, .hero-eyebrow::after {
+    content: ''; width: 28px; height: 1px; background: var(--dorado);
+  }
+  .hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-size: clamp(48px, 9vw, 112px);
+    line-height: 0.98;
+    letter-spacing: -0.015em;
+    margin-bottom: 18px;
+  }
+  .hero-title em {
+    font-style: italic;
+    color: var(--verde-claro);
+    font-weight: 300;
+  }
+  .hero-sub {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: clamp(20px, 2.4vw, 28px);
+    color: var(--verde-claro);
+    font-weight: 300;
+    margin-bottom: 36px;
+    letter-spacing: 0.01em;
+  }
+  .hero-desc {
+    max-width: 560px;
+    margin: 0 auto 44px;
+    color: rgba(250,247,242,0.85);
+    font-size: 15.5px;
+    line-height: 1.8;
+    font-weight: 300;
+  }
+  .hero-cta-row {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 16px 32px;
+    border-radius: 2px;
+    font-weight: 500;
+    transition: all .35s ease;
+    cursor: pointer;
+    border: 1px solid transparent;
+  }
+  .btn-primary {
+    background: var(--dorado);
+    color: var(--verde-oscuro);
+  }
+  .btn-primary:hover { background: var(--dorado-claro); transform: translateY(-2px); }
+  .btn-ghost {
+    background: transparent;
+    border-color: rgba(250,247,242,0.45);
+    color: var(--crema-claro);
+  }
+  .btn-ghost:hover { border-color: var(--crema-claro); background: rgba(250,247,242,0.08); }
+  .btn-dark {
+    background: var(--verde-oscuro);
+    color: var(--crema-claro);
+  }
+  .btn-dark:hover { background: var(--verde-medio); }
+
+  .hero-scroll {
+    position: absolute;
+    bottom: 28px; left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    font-size: 10px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: rgba(250,247,242,0.75);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+  .hero-scroll .line {
+    width: 1px; height: 40px;
+    background: linear-gradient(to bottom, transparent, var(--verde-claro));
+    animation: scrollLine 2.4s ease-in-out infinite;
+  }
+  @keyframes scrollLine {
+    0%,100% { opacity: 0.4; transform: scaleY(1); }
+    50% { opacity: 1; transform: scaleY(1.3); }
+  }
+
+  /* ───── MARQUEE ───── */
+  .marquee {
+    background: var(--verde-oscuro);
+    color: var(--verde-claro);
+    padding: 22px 0;
+    overflow: hidden;
+    border-top: 1px solid rgba(168,197,160,0.12);
+    border-bottom: 1px solid rgba(168,197,160,0.12);
+  }
+  .marquee-track {
+    display: flex;
+    gap: 72px;
+    white-space: nowrap;
+    animation: marquee 38s linear infinite;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 22px;
+  }
+  .marquee-track span { display: inline-flex; align-items: center; gap: 72px; }
+  .marquee-track span::after {
+    content: '✦';
+    font-size: 10px;
+    font-style: normal;
+    color: var(--dorado);
+  }
+  @keyframes marquee { to { transform: translateX(-50%); } }
+
+  /* ───── SECTION BASE ───── */
+  .section { padding: 120px 0; }
+  .section-head { max-width: 720px; margin-bottom: 72px; }
+  .section-head .eyebrow { margin-bottom: 20px; display: block; }
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-size: clamp(36px, 5vw, 56px);
+    color: var(--verde-oscuro);
+    line-height: 1.05;
+    letter-spacing: -0.01em;
+    margin-bottom: 24px;
+  }
+  .section-title em { font-style: italic; color: var(--verde-medio); }
+  .section-lead {
+    font-size: 17px;
+    line-height: 1.75;
+    color: var(--texto-medio);
+    max-width: 620px;
+  }
+
+  /* ───── INTRO / VALUES ───── */
+  .intro {
+    background: var(--crema-profundo);
+  }
+  .intro-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+  .intro-copy p + p { margin-top: 18px; }
+  .intro-copy p {
+    font-size: 16.5px;
+    color: var(--texto-oscuro);
+    line-height: 1.85;
+  }
+  .intro-copy p:first-of-type::first-letter {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 68px;
+    float: left;
+    line-height: 0.9;
+    padding: 6px 14px 0 0;
+    color: var(--verde-medio);
+    font-weight: 400;
+  }
+  .intro-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: var(--crema-dorado);
+    border: 1px solid var(--crema-dorado);
+  }
+  .stat {
+    background: var(--crema-claro);
+    padding: 32px 28px;
+  }
+  .stat-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 56px;
+    font-weight: 300;
+    color: var(--verde-oscuro);
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+  .stat-num small { font-size: 22px; color: var(--dorado); margin-left: 4px; font-weight: 400; }
+  .stat-label {
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--texto-suave);
+    font-weight: 500;
+  }
+  .stat-note {
+    font-size: 12.5px;
+    color: var(--texto-medio);
+    margin-top: 10px;
+    line-height: 1.5;
+  }
+
+  /* ───── ESPACIOS ───── */
+  .espacios { background: var(--crema-claro); }
+  .espacios-head-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 40px;
+    margin-bottom: 64px;
+    flex-wrap: wrap;
+  }
+  .espacios-nav {
+    display: flex;
+    gap: 4px;
+    border: 1px solid var(--crema-dorado);
+    padding: 4px;
+    border-radius: 2px;
+    background: white;
+    flex-wrap: wrap;
+  }
+  .espacios-nav button {
+    border: 0;
+    background: transparent;
+    font-family: inherit;
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    padding: 10px 18px;
+    cursor: pointer;
+    color: var(--texto-suave);
+    font-weight: 500;
+    border-radius: 2px;
+    transition: all .3s;
+  }
+  .espacios-nav button.active {
+    background: var(--verde-oscuro);
+    color: var(--verde-claro);
+  }
+  .espacios-nav button:not(.active):hover { color: var(--verde-medio); background: var(--crema-profundo); }
+
+  .espacio {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+    margin-bottom: 120px;
+  }
+  .espacio:last-child { margin-bottom: 0; }
+  .espacio.reverse .espacio-media { order: 2; }
+  .espacio-media {
+    position: relative;
+    aspect-ratio: 4/5;
+    overflow: hidden;
+    border-radius: 2px;
+  }
+  .espacio-media img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    transition: transform 1.2s ease;
+  }
+  .espacio:hover .espacio-media img { transform: scale(1.04); }
+  .espacio-media::after {
+    content: attr(data-num);
+    position: absolute;
+    bottom: 20px; left: 20px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 14px;
+    color: var(--crema-claro);
+    letter-spacing: 0.2em;
+    padding: 8px 14px;
+    background: rgba(28,58,42,0.7);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(168,197,160,0.3);
+  }
+
+  /* Dual-image composition for a single espacio slot */
+  .espacio-media.duo {
+    aspect-ratio: 4/5;
+    display: grid;
+    grid-template-columns: 1.15fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+    background: transparent;
+    border-radius: 0;
+    overflow: visible;
+  }
+  .espacio-media.duo .duo-a,
+  .espacio-media.duo .duo-b {
+    position: relative;
+    overflow: hidden;
+    border-radius: 2px;
+  }
+  .espacio-media.duo .duo-a {
+    grid-row: 1 / span 2;
+    grid-column: 1;
+  }
+  .espacio-media.duo .duo-b {
+    grid-row: 1 / span 2;
+    grid-column: 2;
+    margin-top: 36px;
+    margin-bottom: -24px;
+  }
+  .espacio-media.duo img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    transition: transform 1.2s ease;
+  }
+  .espacio:hover .espacio-media.duo .duo-a img,
+  .espacio:hover .espacio-media.duo .duo-b img {
+    transform: scale(1.04);
+  }
+  .espacio-media.duo::after {
+    bottom: auto;
+    top: 14px;
+    left: 14px;
+    z-index: 3;
+  }
+
+  .espacio-body .eyebrow { margin-bottom: 16px; display: block; }
+  .espacio-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(32px, 4vw, 48px);
+    font-weight: 300;
+    color: var(--verde-oscuro);
+    line-height: 1.05;
+    margin-bottom: 12px;
+    letter-spacing: -0.005em;
+  }
+  .espacio-name em { font-style: italic; color: var(--verde-medio); }
+  .espacio-sub {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--dorado);
+    font-size: 18px;
+    margin-bottom: 24px;
+  }
+  .espacio-desc {
+    color: var(--texto-medio);
+    font-size: 15.5px;
+    line-height: 1.85;
+    margin-bottom: 24px;
+    border-left: 1px solid var(--dorado);
+    padding-left: 20px;
+  }
+  .espacio-features {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 20px;
+  }
+  .espacio-features li {
+    font-size: 13.5px;
+    color: var(--texto-oscuro);
+    padding-left: 18px;
+    position: relative;
+    line-height: 1.6;
+  }
+  .espacio-features li::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 10px;
+    width: 6px; height: 6px;
+    border: 1px solid var(--dorado);
+    transform: rotate(45deg);
+  }
+
+  /* ───── MOMENTOS ───── */
+  .momentos {
+    background: var(--verde-oscuro);
+    color: var(--crema-claro);
+    position: relative;
+    overflow: hidden;
+  }
+  .momentos::before {
+    content: '';
+    position: absolute;
+    top: -200px; right: -200px;
+    width: 600px; height: 600px;
+    border-radius: 50%;
+    border: 1px solid rgba(168,197,160,0.08);
+  }
+  .momentos::after {
+    content: '';
+    position: absolute;
+    top: -100px; right: -100px;
+    width: 400px; height: 400px;
+    border-radius: 50%;
+    border: 1px solid rgba(168,197,160,0.06);
+  }
+  .momentos .section-title { color: var(--crema-claro); }
+  .momentos .section-title em { color: var(--verde-claro); }
+  .momentos .section-lead { color: rgba(212,232,208,0.75); }
+  .momentos .eyebrow { color: var(--dorado-claro); }
+
+  .momentos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    position: relative;
+    z-index: 2;
+  }
+  .momento {
+    border: 1px solid rgba(168,197,160,0.18);
+    padding: 32px 28px;
+    background: rgba(45,90,61,0.18);
+    transition: all .4s;
+  }
+  .momento:hover {
+    background: rgba(45,90,61,0.35);
+    border-color: rgba(184,150,90,0.4);
+    transform: translateY(-4px);
+  }
+  .momento-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 14px;
+    color: var(--dorado);
+    letter-spacing: 0.2em;
+    margin-bottom: 24px;
+    display: block;
+  }
+  .momento-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    color: var(--crema-claro);
+    font-weight: 400;
+    margin-bottom: 14px;
+    line-height: 1.2;
+  }
+  .momento-name em { font-style: italic; color: var(--verde-claro); }
+  .momento-desc {
+    font-size: 13.5px;
+    color: rgba(212,232,208,0.72);
+    line-height: 1.75;
+  }
+
+  /* ───── GALERÍA (MARQUEE) ───── */
+  .galeria {
+    background: var(--crema-profundo);
+    overflow: hidden;
+    position: relative;
+  }
+  .galeria .section-head { margin-bottom: 52px; }
+  .galeria-viewport {
+    overflow: hidden;
+    width: 100%;
+  }
+  .galeria-track {
+    display: flex;
+    gap: 14px;
+    width: max-content;
+    animation: galScroll 90s linear infinite;
+  }
+  .galeria-viewport:hover .galeria-track { animation-play-state: paused; }
+  @keyframes galScroll {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  .slide {
+    flex: none;
+    width: 38vw;
+    aspect-ratio: 16/9;
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+    background: var(--verde-oscuro);
+  }
+  .slide img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+  }
+
+  /* ───── ADICIONALES ───── */
+  .adicionales {
+    background: var(--crema-claro);
+    position: relative;
+    overflow: hidden;
+  }
+  .adicionales::before {
+    content: '';
+    position: absolute;
+    top: 10%; left: -180px;
+    width: 360px; height: 360px;
+    border-radius: 50%;
+    border: 1px solid rgba(184,150,90,0.15);
+  }
+  .adicionales-head {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: end;
+    margin-bottom: 64px;
+  }
+  .adicionales-head .section-lead { margin-top: 0; max-width: none; }
+  .adicionales-head-copy .section-title { margin-top: 20px; }
+
+  .adicionales-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    position: relative;
+    z-index: 2;
+  }
+  .ad-tile {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 4/5;
+    background: var(--verde-oscuro);
+    border-radius: 2px;
+    transition: transform .4s ease;
+  }
+  .ad-tile:hover { transform: translateY(-4px); }
+  .ad-tile img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    transition: transform 1.2s ease, filter .6s;
+  }
+  .ad-tile:hover img { transform: scale(1.05); }
+  .ad-tile::after {
+    content: '';
+    position: absolute; inset: 0;
+    background: linear-gradient(180deg, transparent 35%, rgba(28,58,42,0.92) 100%);
+  }
+  .ad-tile .ad-num {
+    position: absolute;
+    top: 20px; left: 22px;
+    z-index: 2;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 14px;
+    letter-spacing: 0.22em;
+    color: var(--dorado-claro);
+  }
+  .ad-tile .ad-label {
+    position: absolute;
+    left: 24px; right: 24px; bottom: 24px;
+    z-index: 2;
+    color: var(--crema-claro);
+  }
+  .ad-tile .ad-label strong {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    font-size: 28px;
+    display: block;
+    line-height: 1.1;
+    margin-bottom: 6px;
+    letter-spacing: -0.005em;
+  }
+  .ad-tile .ad-label strong em {
+    font-style: italic;
+    color: var(--verde-claro);
+  }
+  .ad-tile .ad-label span {
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--dorado-claro);
+    font-weight: 500;
+  }
+
+  .adicionales-foot {
+    margin-top: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    padding: 32px 40px;
+    border: 1px solid var(--crema-dorado);
+    background: rgba(255,255,255,0.4);
+    flex-wrap: wrap;
+  }
+  .adicionales-foot p {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 22px;
+    color: var(--verde-oscuro);
+    line-height: 1.4;
+    max-width: 620px;
+  }
+  .adicionales-foot a.ad-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 28px;
+    background: var(--verde-oscuro);
+    color: var(--crema-claro);
+    font-size: 11.5px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    font-weight: 500;
+    border-radius: 2px;
+    transition: background .3s, transform .3s;
+  }
+  .adicionales-foot a.ad-cta:hover {
+    background: var(--verde-medio);
+    transform: translateY(-2px);
+  }
+
+  /* ───── CONTACTO ───── */
+  .contacto {
+    background: var(--crema-claro);
+    position: relative;
+  }
+  .contacto-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+  .contacto-copy .section-title { margin-bottom: 28px; }
+  .contacto-info {
+    margin-top: 40px;
+    display: grid;
+    gap: 20px;
+  }
+  .info-row {
+    display: grid;
+    grid-template-columns: 130px 1fr;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--crema-dorado);
+    align-items: baseline;
+  }
+  .info-row:first-child { border-top: 1px solid var(--crema-dorado); }
+  .info-key {
+    font-size: 10.5px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--texto-suave);
+    font-weight: 500;
+  }
+  .info-val {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 19px;
+    color: var(--verde-oscuro);
+    font-weight: 400;
+  }
+
+  .contact-card {
+    background: var(--verde-oscuro);
+    color: var(--crema-claro);
+    padding: 48px 44px;
+    position: relative;
+    overflow: hidden;
+  }
+  .contact-card::before {
+    content: '';
+    position: absolute;
+    top: -80px; right: -80px;
+    width: 240px; height: 240px;
+    border-radius: 50%;
+    border: 1px solid rgba(168,197,160,0.18);
+  }
+  .contact-card .eyebrow { color: var(--dorado-claro); margin-bottom: 16px; display: block; }
+  .contact-card h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 34px;
+    font-weight: 300;
+    line-height: 1.1;
+    margin-bottom: 16px;
+  }
+  .contact-card h3 em { font-style: italic; color: var(--verde-claro); }
+  .contact-card p {
+    color: rgba(212,232,208,0.78);
+    font-size: 14.5px;
+    line-height: 1.75;
+    margin-bottom: 28px;
+  }
+  .contact-cta {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 16px 24px;
+    background: var(--wa);
+    color: white;
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-weight: 600;
+    border-radius: 2px;
+    transition: transform .3s, background .3s;
+    width: fit-content;
+    position: relative;
+    z-index: 2;
+  }
+  .contact-cta:hover { background: #1EBE5D; transform: translateY(-2px); }
+
+  .contact-list {
+    position: relative;
+    z-index: 2;
+    margin-top: 32px;
+    display: grid;
+    gap: 14px;
+    font-size: 13.5px;
+  }
+  .contact-list-row {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    padding-top: 14px;
+    border-top: 1px solid rgba(168,197,160,0.18);
+  }
+  .contact-list-row:first-child { border-top: 0; padding-top: 0; }
+  .contact-list-row .k {
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--verde-claro);
+    min-width: 72px;
+    padding-top: 3px;
+    font-weight: 500;
+  }
+  .contact-list-row .v {
+    color: rgba(250,247,242,0.92);
+    line-height: 1.55;
+  }
+  .contact-list-row .v a:hover { color: var(--dorado-claro); }
+
+  /* ───── FOOTER ───── */
+  footer {
+    background: var(--verde-oscuro);
+    color: rgba(168,197,160,0.7);
+    padding: 64px 0 32px;
+    border-top: 1px solid rgba(168,197,160,0.12);
+  }
+  .footer-top {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr;
+    gap: 60px;
+    padding-bottom: 48px;
+    border-bottom: 1px solid rgba(168,197,160,0.12);
+  }
+  .footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+  }
+  .footer-brand img { width: 52px; height: 52px; border-radius: 50%; }
+  .footer-brand-txt {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    color: var(--crema-claro);
+    font-weight: 400;
+    line-height: 1.1;
+  }
+  .footer-brand-txt small {
+    display: block;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--dorado-claro);
+    margin-top: 4px;
+    font-weight: 400;
+  }
+  .footer-tag {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 18px;
+    color: var(--verde-claro);
+    max-width: 320px;
+    line-height: 1.45;
+  }
+  .footer h4 {
+    font-size: 10.5px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--dorado-claro);
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+  .footer ul { list-style: none; display: grid; gap: 10px; }
+  .footer ul li { font-size: 13.5px; line-height: 1.55; color: rgba(212,232,208,0.78); }
+  .footer ul li a:hover { color: var(--crema-claro); }
+  .footer-bottom {
+    padding-top: 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    font-size: 11.5px;
+    letter-spacing: 0.06em;
+    color: rgba(168,197,160,0.55);
+    flex-wrap: wrap;
+  }
+
+  /* ───── WHATSAPP FLOAT ───── */
+  .wa-float {
+    position: fixed;
+    bottom: 28px; right: 28px;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    gap: 0;
+    transition: gap .4s ease;
+  }
+  .wa-label {
+    background: var(--crema-claro);
+    color: var(--verde-oscuro);
+    padding: 0 18px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    border-radius: 28px 0 0 28px;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 15px;
+    white-space: nowrap;
+    box-shadow: 0 10px 40px rgba(28,58,42,0.22);
+    max-width: 0;
+    padding-left: 0; padding-right: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all .4s ease;
+    margin-right: -16px;
+    border: 1px solid rgba(184,150,90,0.25);
+  }
+  .wa-float:hover .wa-label,
+  .wa-float.hint .wa-label {
+    max-width: 260px;
+    padding: 0 22px 0 18px;
+    opacity: 1;
+    margin-right: -16px;
+  }
+  .wa-btn {
+    width: 62px; height: 62px;
+    background: var(--wa);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 12px 32px rgba(37,211,102,0.4), 0 0 0 0 rgba(37,211,102,0.5);
+    position: relative;
+    z-index: 2;
+    transition: transform .3s;
+    animation: waPulse 2.6s ease-in-out infinite;
+  }
+  .wa-btn:hover { transform: scale(1.06); }
+  .wa-btn svg { width: 30px; height: 30px; color: white; }
+  @keyframes waPulse {
+    0% { box-shadow: 0 12px 32px rgba(37,211,102,0.4), 0 0 0 0 rgba(37,211,102,0.5); }
+    70% { box-shadow: 0 12px 32px rgba(37,211,102,0.4), 0 0 0 18px rgba(37,211,102,0); }
+    100% { box-shadow: 0 12px 32px rgba(37,211,102,0.4), 0 0 0 0 rgba(37,211,102,0); }
+  }
+
+  /* ───── REVEAL ───── */
+  .reveal { opacity: 0; transform: translateY(30px); transition: opacity .9s ease, transform .9s ease; }
+  .reveal.in { opacity: 1; transform: translateY(0); }
+
+  /* ───── RESPONSIVE ───── */
+  @media (max-width: 900px) {
+    .section { padding: 80px 0; }
+    .nav-links { display: none; }
+    .nav-burger { display: block; }
+    .intro-grid, .espacio, .espacio.reverse, .contacto-grid { grid-template-columns: 1fr; gap: 48px; }
+    .adicionales-head { grid-template-columns: 1fr; gap: 16px; }
+    .adicionales-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+    .adicionales-foot { padding: 24px 24px; flex-direction: column; align-items: flex-start; }
+    .adicionales-foot p { font-size: 18px; }
+    .espacio.reverse .espacio-media { order: 0; }
+    .espacio-media { aspect-ratio: 4/3; }
+    .momentos-grid { grid-template-columns: 1fr; }
+    .galeria-grid { grid-template-columns: repeat(4, 1fr); grid-auto-rows: 140px; }
+    .t-wide { grid-column: span 4; grid-row: span 2; }
+    .t-tall { grid-column: span 2; grid-row: span 2; }
+    .t-sq, .t-sm { grid-column: span 2; }
+    .footer-top { grid-template-columns: 1fr; gap: 40px; }
+    .espacios-head-row { flex-direction: column; align-items: flex-start; }
+    .espacio-features { grid-template-columns: 1fr; }
+    .wa-label { display: none; }
+    .wa-float { bottom: 20px; right: 20px; }
+  }
+  @media (max-width: 560px) {
+    .nav-brand-text strong { font-size: 15px; }
+    .nav-brand-text small { display: none; }
+    .hero { padding: 100px 18px 60px; }
+    .btn { padding: 14px 22px; font-size: 11px; }
+    .intro-stats { grid-template-columns: 1fr; }
+    .info-row { grid-template-columns: 100px 1fr; }
+    .contact-card { padding: 36px 28px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══════ NAV ═══════ -->
+<nav class="nav" id="nav">
+  <a href="#top" class="nav-brand">
+    <img src="assets/logo.png" alt="Quintas Espacio Álvarez">
+    <div class="nav-brand-text">
+      <strong>Quintas</strong>
+      <small>Espacio Álvarez</small>
+    </div>
+  </a>
+  <div class="nav-links">
+    <a href="#espacios">Espacios</a>
+    <a href="#momentos">Momentos</a>
+    <a href="#adicionales">Adicionales</a>
+    <a href="#galeria">Galería</a>
+    <a href="#contacto">Contacto</a>
+  </div>
+  <a href="#contacto" class="nav-cta">Reservar</a>
+  <button class="nav-burger" aria-label="Menú"><span></span><span></span><span></span></button>
+</nav>
+
+<!-- ═══════ HERO ═══════ -->
+<section class="hero" id="top">
+  <video class="hero-video" autoplay muted loop playsinline poster="assets/pileta-noche.jpg">
+    <source src="assets/hero-atardecer.mp4" type="video/mp4">
+  </video>
+  <div class="hero-overlay"></div>
+  <div class="hero-inner">
+    <div class="eyebrow hero-eyebrow">Francisco Álvarez · Buenos Aires</div>
+    <h1 class="hero-title">Donde el tiempo<br><em>se detiene</em></h1>
+    <p class="hero-sub">Naturaleza, arquitectura y luz para tu próximo evento</p>
+    <p class="hero-desc">
+      Una quinta en Francisco Álvarez con parque, pileta, galería con parrilla, salón cubierto y hospedaje. Pensada para recibir celebraciones que merecen un lugar a su altura.
+    </p>
+    <div class="hero-cta-row">
+      <a href="#espacios" class="btn btn-primary">Conocer los espacios
+        <svg width="14" height="10" viewBox="0 0 14 10" fill="none"><path d="M1 5H13M13 5L9 1M13 5L9 9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+      </a>
+      <a href="#contacto" class="btn btn-ghost">Consultar disponibilidad</a>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <span>Descubrir</span>
+    <span class="line"></span>
+  </div>
+</section>
+
+<!-- ═══════ MARQUEE ═══════ -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Casamientos</span><span>Cumpleaños</span><span>Corporativos</span><span>Lanzamientos</span><span>Cenas íntimas</span><span>Producciones</span>
+    <span>Casamientos</span><span>Cumpleaños</span><span>Corporativos</span><span>Lanzamientos</span><span>Cenas íntimas</span><span>Producciones</span>
+  </div>
+</div>
+
+<!-- ═══════ INTRO ═══════ -->
+<section class="section intro">
+  <div class="container">
+    <div class="intro-grid">
+      <div class="intro-copy reveal">
+        <span class="eyebrow">La Quinta</span>
+        <h2 class="section-title" style="margin-top:20px;">Un lugar para <em>habitar</em> el evento</h2>
+        <p>Quintas Espacio Álvarez nace de una convicción simple: los mejores recuerdos se construyen en lugares que respiran. Un parque propio, una arquitectura sobria de hormigón visto, y árboles que llevan décadas esperando la próxima celebración.</p>
+        <p>Cada rincón fue pensado para que la fiesta fluya sin esfuerzo: del cóctel al aire libre a la cena puertas adentro, del baño en la pileta al último brindis junto a la parrilla.</p>
+      </div>
+      <div class="intro-stats reveal">
+        <div class="stat">
+          <div class="stat-num">260<small>m²</small></div>
+          <div class="stat-label">Parque</div>
+          <div class="stat-note">Con pileta, solárium y galería con parrilla.</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">20<small>autos</small></div>
+          <div class="stat-label">Estacionamiento</div>
+          <div class="stat-note">Portón automático, ingreso propio.</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">3<small>hab</small></div>
+          <div class="stat-label">Dormitorios</div>
+          <div class="stat-note">Con Smart TV. Más 4 baños para invitados.</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">20<small>pax</small></div>
+          <div class="stat-label">Cocina completa</div>
+          <div class="stat-note">Vajilla, vasos y cubiertos listos para usar.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ ESPACIOS ═══════ -->
+<section class="section espacios" id="espacios">
+  <div class="container">
+    <div class="espacios-head-row">
+      <div class="section-head reveal">
+        <span class="eyebrow">Los Espacios</span>
+        <h2 class="section-title" style="margin-top:20px;">Seis ambientes,<br>una <em>misma historia</em></h2>
+        <p class="section-lead">Cada espacio tiene personalidad propia. Se combinan, se suceden, se eligen. La quinta se adapta al ritmo del evento y no al revés.</p>
+      </div>
+      <div class="espacios-nav reveal" role="tablist">
+        <button class="active" data-jump="e1">Quincho</button>
+        <button data-jump="e2">Parque</button>
+        <button data-jump="e3">Pileta</button>
+        <button data-jump="e4">Salón</button>
+        <button data-jump="e5">Hospedaje</button>
+      </div>
+    </div>
+
+    <!-- ESPACIO 1 -->
+    <article class="espacio reveal" id="e1">
+      <div class="espacio-media" data-num="01 · Quincho">
+        <img src="assets/quincho-gente.jpg" alt="Quincho de hormigón visto con gente reunida">
+      </div>
+      <div class="espacio-body">
+        <span class="eyebrow">01 · El corazón</span>
+        <h3 class="espacio-name">El Quincho <em>de hormigón</em></h3>
+        <p class="espacio-sub">Galería 9,5 × 4,5 m con parrilla grande</p>
+        <p class="espacio-desc">Galería semicubierta de hormigón visto con parrilla grande, conectada al parque y al salón principal. El espacio donde se reciben los invitados, donde se cocina a leña y donde las celebraciones se consolidan cuando cae la noche.</p>
+        <ul class="espacio-features">
+          <li>Galería 9,5 × 4,5 m</li>
+          <li>Parrilla grande</li>
+          <li>Conexión directa al parque</li>
+          <li>Integrada al salón cubierto</li>
+          <li>Techo alto semicubierto</li>
+          <li>Uso diurno y nocturno</li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- ESPACIO 2 -->
+    <article class="espacio reverse reveal" id="e2">
+      <div class="espacio-media" data-num="02 · Parque">
+        <img src="assets/parque-dia.jpg" alt="Parque de día con gazebo blanco y pufs">
+      </div>
+      <div class="espacio-body">
+        <span class="eyebrow">02 · Al aire libre</span>
+        <h3 class="espacio-name">El Parque <em>de 260 m²</em></h3>
+        <p class="espacio-sub">Césped, sombra y perspectivas largas</p>
+        <p class="espacio-desc">260 m² de parque propio que integra pileta, solárium y galería en una sola continuidad verde. Árboles que definen rincones, espacio para gazebos, mesas largas o ceremonias al aire libre.</p>
+        <ul class="espacio-features">
+          <li>260 m² de parque</li>
+          <li>Integra pileta y solárium</li>
+          <li>Apto gazebos y mesas largas</li>
+          <li>Sombra natural</li>
+          <li>Continuidad con la galería</li>
+          <li>Uso de día y de noche</li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- ESPACIO 3 -->
+    <article class="espacio reveal" id="e3">
+      <div class="espacio-media" data-num="03 · Pileta">
+        <img src="assets/pileta-noche.jpg" alt="Pileta iluminada al atardecer con fuente">
+      </div>
+      <div class="espacio-body">
+        <span class="eyebrow">03 · El agua</span>
+        <h3 class="espacio-name">La Pileta <em>10 × 4</em></h3>
+        <p class="espacio-sub">Con playa húmeda para los más chicos</p>
+        <p class="espacio-desc">Pileta de 10 × 4 m con playa húmeda para chicos, integrada al solárium de 5 × 4 m con reposeras y sillones. Protagonista al atardecer, espejo a la noche, rincón frecuente de las mejores fotos del evento.</p>
+        <ul class="espacio-features">
+          <li>Pileta 10 × 4 m</li>
+          <li>Playa húmeda para chicos</li>
+          <li>Solárium 5 × 4 m</li>
+          <li>Reposeras y sillones</li>
+          <li>Iluminación nocturna</li>
+          <li>Continuidad con el parque</li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- ESPACIO 4 -->
+    <article class="espacio reverse reveal" id="e4">
+      <div class="espacio-media" data-num="04 · Salón">
+        <img src="assets/barra.jpg" alt="Salón cubierto con cocina integrada">
+      </div>
+      <div class="espacio-body">
+        <span class="eyebrow">04 · Puertas adentro</span>
+        <h3 class="espacio-name">El Salón <em>7 × 9,5</em></h3>
+        <p class="espacio-sub">Salón cubierto con cocina integrada</p>
+        <p class="espacio-desc">Salón cubierto de 7 × 9,5 m con cocina integrada, living con sillón y Smart TV 55". Cocina completa con vajilla, cubiertos y vasos para 20 personas, pava eléctrica, heladera y freezer. El refugio para cuando baja la temperatura o la noche se hace larga.</p>
+        <ul class="espacio-features">
+          <li>Salón 7 × 9,5 m</li>
+          <li>Cocina integrada y completa</li>
+          <li>Vajilla para 20 personas</li>
+          <li>Heladera + freezer</li>
+          <li>Living con Smart TV 55"</li>
+          <li>Wifi y música moderada</li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- ESPACIO 5 -->
+    <article class="espacio reveal" id="e5">
+      <div class="espacio-media duo" data-num="05 · Hospedaje">
+        <div class="duo-a"><img src="assets/habitacion-1.jpg" alt="Habitación con camas cuchetas blancas y mantas color mostaza"></div>
+        <div class="duo-b"><img src="assets/habitacion-2.jpg" alt="Habitación con placarón integrado y cuchetas"></div>
+      </div>
+      <div class="espacio-body">
+        <span class="eyebrow">05 · Descanso</span>
+        <h3 class="espacio-name">3 Habitaciones <em>+ 4 baños</em></h3>
+        <p class="espacio-sub">Ideal para un fin de semana con amigos o familia</p>
+        <p class="espacio-desc">Tres habitaciones con Smart TV y cuatro baños distribuidos en la casa. Pensado para quedarse un fin de semana entero: descansar, alejarse de la rutina, pasar tiempo con amigos o con la familia sin tener que volver a la ciudad.</p>
+        <ul class="espacio-features">
+          <li>3 habitaciones</li>
+          <li>Smart TV en cada una</li>
+          <li>4 baños</li>
+          <li>Wifi en todo el predio</li>
+          <li>Estacionamiento privado</li>
+          <li>Portón automático</li>
+        </ul>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ═══════ MOMENTOS ═══════ -->
+<section class="section momentos" id="momentos">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Qué celebramos</span>
+      <h2 class="section-title" style="margin-top:20px;">Cada evento tiene<br>su <em>propio tiempo</em></h2>
+      <p class="section-lead">Adaptamos la quinta al tipo de celebración. Estos son los formatos que mejor conocemos, aunque nunca decimos que no a una idea nueva.</p>
+    </div>
+    <div class="momentos-grid">
+      <div class="momento reveal">
+        <span class="momento-num">I.</span>
+        <h3 class="momento-name">Casamientos <em>& civiles</em></h3>
+        <p class="momento-desc">Ceremonia al aire libre, cóctel entre árboles, fiesta puertas adentro. Un mismo lugar acompaña las tres etapas sin que nadie tenga que moverse en auto.</p>
+      </div>
+      <div class="momento reveal">
+        <span class="momento-num">II.</span>
+        <h3 class="momento-name">Cumpleaños <em>significativos</em></h3>
+        <p class="momento-desc">15, 40, 50, 70. Las fechas redondas merecen un marco distinto. Capacidad y flexibilidad para formatos íntimos o de gran escala.</p>
+      </div>
+      <div class="momento reveal">
+        <span class="momento-num">III.</span>
+        <h3 class="momento-name">Eventos <em>corporativos</em></h3>
+        <p class="momento-desc">Team buildings, lanzamientos, fiestas de fin de año. Infraestructura para presentaciones formales y clima distendido para el after.</p>
+      </div>
+      <div class="momento reveal">
+        <span class="momento-num">IV.</span>
+        <h3 class="momento-name">Cenas <em>íntimas</em></h3>
+        <p class="momento-desc">Mesa larga en la galería o al aire libre, servicio cuidado y sobremesa sin apuro. Cocina completa y vajilla para 20 personas incluidas.</p>
+      </div>
+      <div class="momento reveal">
+        <span class="momento-num">V.</span>
+        <h3 class="momento-name">Finde <em>de descanso</em></h3>
+        <p class="momento-desc">Juntada con familia y amigos, alejados del ruido de la rutina. Ideal para conectar con los tuyos.</p>
+      </div>
+      <div class="momento reveal">
+        <span class="momento-num">VI.</span>
+        <h3 class="momento-name">Retiros <em>y talleres</em></h3>
+        <p class="momento-desc">Yoga, gastronomía, bienestar. Un día entero fuera de la ciudad, con la logística y el silencio que este tipo de encuentros necesitan.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ GALERÍA ═══════ -->
+<section class="section galeria" id="galeria">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Galería</span>
+      <h2 class="section-title" style="margin-top:20px;">La quinta, <em>en instantes</em></h2>
+      <p class="section-lead">Fragmentos de la quinta en uso. Una idea del clima que se arma, a cualquier hora del día.</p>
+    </div>
+
+  </div><!-- /container -->
+
+  <div class="galeria-viewport">
+    <div class="galeria-track" id="galTrack">
+      <div class="slide"><img src="assets/pileta-noche.jpg" alt="Pileta iluminada al atardecer"></div>
+      <div class="slide"><img src="assets/parque-dia.jpg" alt="Parque de día"></div>
+      <div class="slide"><img src="assets/quincho-gente.jpg" alt="Quincho con gente reunida"></div>
+      <div class="slide"><img src="assets/barra.jpg" alt="Barra de bebidas y living"></div>
+      <div class="slide"><img src="assets/dj-atardecer.jpg" alt="DJ al atardecer"></div>
+      <div class="slide"><img src="assets/jardin-pool.jpg" alt="Jardín con pool table"></div>
+      <div class="slide"><img src="assets/gal-pileta-noche.jpg" alt="Pileta de noche con guirnaldas"></div>
+      <div class="slide"><img src="assets/gal-evento.jpg" alt="Evento con amigos en el salón"></div>
+      <div class="slide"><img src="assets/gal-parrilla.jpg" alt="Hogar encendido y reunión de noche"></div>
+      <div class="slide"><img src="assets/gal-juegos.jpg" alt="Pool y metegol en el quincho"></div>
+      <div class="slide"><img src="assets/gal-inflable.jpg" alt="Inflable acuático junto a la pileta"></div>
+      <div class="slide"><img src="assets/gal-pileta-dia.jpg" alt="Pileta de día con reposeras"></div>
+      <div class="slide"><img src="assets/ad-gazebo.jpg" alt="Gazebos en el parque"></div>
+      <div class="slide"><img src="assets/ad-inflable.jpg" alt="Inflable acuático"></div>
+      <div class="slide"><img src="assets/ad-juegos.jpg" alt="Pool y metegol de salón"></div>
+      <div class="slide"><img src="assets/ad-dj.jpg" alt="DJ tocando en vivo"></div>
+      <div class="slide"><img src="assets/ad-barra.jpg" alt="Barra móvil con bartenders"></div>
+      <div class="slide"><img src="assets/habitacion-1.jpg" alt="Habitación con camas cuchetas"></div>
+      <div class="slide"><img src="assets/habitacion-2.jpg" alt="Habitación con placarón y cuchetas"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ ADICIONALES ═══════ -->
+<section class="section adicionales" id="adicionales">
+  <div class="container">
+    <div class="adicionales-head reveal">
+      <div class="adicionales-head-copy">
+        <span class="eyebrow">Nos encargamos de todo</span>
+        <h2 class="section-title">Lo que <em>imagines</em>,<br>lo armamos</h2>
+      </div>
+      <p class="section-lead">Contanos qué necesitás y lo ponemos a disposición. Trabajamos con proveedores de confianza para que solo te ocupes de disfrutar.</p>
+    </div>
+
+    <div class="adicionales-grid">
+      <div class="ad-tile reveal">
+        <img src="assets/ad-gazebo.jpg" alt="Gazebos y livings en el parque">
+        <span class="ad-num">I.</span>
+        <div class="ad-label"><strong>Gazebos <em>& livings</em></strong><span>Mobiliario de exterior</span></div>
+      </div>
+      <div class="ad-tile reveal">
+        <img src="assets/ad-inflable.jpg" alt="Inflable acuático junto a la pileta">
+        <span class="ad-num">II.</span>
+        <div class="ad-label"><strong>Inflables <em>acuáticos</em></strong><span>Para grandes y chicos</span></div>
+      </div>
+      <div class="ad-tile reveal">
+        <img src="assets/ad-juegos.jpg" alt="Pool y metegol">
+        <span class="ad-num">III.</span>
+        <div class="ad-label"><strong>Pool &amp; <em>metegol</em></strong><span>Juegos de salón</span></div>
+      </div>
+      <div class="ad-tile reveal">
+        <img src="assets/ad-dj.jpg" alt="DJ tocando al atardecer bajo el árbol">
+        <span class="ad-num">IV.</span>
+        <div class="ad-label"><strong>Barras <em>móviles</em></strong><span>Coctelería de autor</span></div>
+      </div>
+      <div class="ad-tile reveal">
+        <img src="assets/ad-barra.jpg" alt="Barra móvil con bartenders">
+        <span class="ad-num">V.</span>
+        <div class="ad-label"><strong>DJ <em>& sonido</em></strong><span>Música en vivo</span></div>
+      </div>
+      <div class="ad-tile reveal">
+        <img src="assets/quincho-gente.jpg" alt="Evento con catering">
+        <span class="ad-num">VI.</span>
+        <div class="ad-label"><strong>Catering <em>a medida</em></strong><span>Cocina para tu evento</span></div>
+      </div>
+    </div>
+
+    <div class="adicionales-foot reveal">
+      <p>¿No encontrás lo que buscás? <br>Contanos qué te imaginás y lo coordinamos.</p>
+      <a href="https://api.whatsapp.com/send/?phone=541149729019&text&type=phone_number&app_absent=0" target="_blank" rel="noopener" class="ad-cta">
+        Armar mi evento
+        <svg width="14" height="10" viewBox="0 0 14 10" fill="none"><path d="M1 5H13M13 5L9 1M13 5L9 9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ CONTACTO ═══════ -->
+<section class="section contacto" id="contacto">
+  <div class="container">
+    <div class="contacto-grid">
+      <div class="contacto-copy reveal">
+        <span class="eyebrow">Reservas</span>
+        <h2 class="section-title" style="margin-top:20px;">Cuéntanos qué vas a <em>celebrar</em></h2>
+        <p class="section-lead">Respondemos en menos de 24 horas. Agendamos una visita al predio, repasamos fechas y armamos juntos la propuesta.</p>
+
+        <div class="contacto-info">
+          <div class="info-row">
+            <span class="info-key">Ubicación</span>
+            <span class="info-val">Francisco Álvarez</span>
+          </div>
+          <div class="info-row">
+            <span class="info-key">Provincia</span>
+            <span class="info-val">Buenos Aires · Argentina</span>
+          </div>
+          <div class="info-row">
+            <span class="info-key">Horario</span>
+            <span class="info-val">Visitas con agenda previa</span>
+          </div>
+          <div class="info-row">
+            <span class="info-key">Responder</span>
+            <span class="info-val">&lt; 24 hs hábiles</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-card reveal">
+        <span class="eyebrow">Escribinos directo</span>
+        <h3>Una charla por<br><em>WhatsApp</em></h3>
+        <p>La forma más rápida de chequear fechas disponibles y recibir el dossier con fotos, capacidades y valores. Sin compromiso.</p>
+        <a href="https://api.whatsapp.com/send/?phone=541149729019&text&type=phone_number&app_absent=0" target="_blank" rel="noopener" class="contact-cta">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.52 3.48A11.88 11.88 0 0 0 12 0C5.37 0 0 5.37 0 12c0 2.11.55 4.17 1.6 6L0 24l6.16-1.62A11.94 11.94 0 0 0 12 24c6.63 0 12-5.37 12-12 0-3.2-1.25-6.2-3.48-8.52zM12 22a9.9 9.9 0 0 1-5.05-1.38l-.36-.22-3.66.96.98-3.56-.24-.38A9.93 9.93 0 0 1 2 12c0-5.52 4.48-10 10-10s10 4.48 10 10-4.48 10-10 10zm5.5-7.5c-.3-.15-1.78-.88-2.06-.98-.28-.1-.48-.15-.68.15s-.78.98-.96 1.18c-.18.2-.36.22-.66.08-.3-.15-1.27-.47-2.42-1.5-.9-.8-1.5-1.78-1.68-2.08-.18-.3-.02-.46.13-.61.13-.13.3-.35.46-.53.15-.18.2-.3.3-.5.1-.2.05-.37-.03-.52-.08-.15-.68-1.64-.93-2.25-.24-.58-.48-.5-.66-.51l-.57-.01c-.2 0-.52.07-.8.37s-1.05 1.03-1.05 2.5 1.07 2.9 1.23 3.1c.15.2 2.1 3.2 5.1 4.5.71.3 1.26.48 1.69.62.71.23 1.36.2 1.87.12.57-.08 1.78-.73 2.03-1.43.25-.7.25-1.3.18-1.43-.07-.13-.27-.2-.57-.35z"/></svg>
+          11 4972-9019
+        </a>
+
+        <div class="contact-list">
+          <div class="contact-list-row">
+            <span class="k">Mail</span>
+            <span class="v"><a href="mailto:quintas.espacioalvarez@gmail.com">quintas.espacioalvarez@gmail.com</a></span>
+          </div>
+          <div class="contact-list-row">
+            <span class="k">Instagram</span>
+            <span class="v"><a href="#">@quintas.espacioalvarez</a></span>
+          </div>
+          <div class="contact-list-row">
+            <span class="k">Cómo llegar</span>
+            <span class="v"><a href="https://www.google.com/maps/place/Alcorta+531,+B1748+General+Rodr%C3%ADguez,+Provincia+de+Buenos+Aires,+Argentina/@-34.5955114,-58.8790449,17z" target="_blank" rel="noopener">Ver en Google Maps →</a></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ FOOTER ═══════ -->
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">
+          <img src="assets/logo.png" alt="">
+          <div class="footer-brand-txt">
+            Quintas
+            <small>Espacio Álvarez</small>
+          </div>
+        </div>
+        <p class="footer-tag">Un espacio pensado para que las celebraciones se sientan en casa.</p>
+      </div>
+      <div>
+        <h4>Navegación</h4>
+        <ul>
+          <li><a href="#espacios">Los espacios</a></li>
+          <li><a href="#momentos">Qué celebramos</a></li>
+          <li><a href="#adicionales">Adicionales</a></li>
+          <li><a href="#galeria">Galería</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contacto</h4>
+        <ul>
+          <li>Francisco Álvarez</li>
+          <li>Buenos Aires · Argentina</li>
+          <li><a href="https://api.whatsapp.com/send/?phone=541149729019&text&type=phone_number&app_absent=0">WhatsApp · 11 4972-9019</a></li>
+          <li><a href="mailto:quintas.espacioalvarez@gmail.com">quintas.espacioalvarez@gmail.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Quintas Espacio Álvarez. Todos los derechos reservados.</span>
+      <span>Francisco Álvarez · Buenos Aires · Argentina</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══════ WHATSAPP FLOAT ═══════ -->
+<a href="https://api.whatsapp.com/send/?phone=541149729019&text&type=phone_number&app_absent=0"
+   target="_blank" rel="noopener"
+   class="wa-float" id="waFloat"
+   aria-label="Consultar por WhatsApp">
+  <span class="wa-label">Consultanos por WhatsApp</span>
+  <span class="wa-btn">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.52 3.48A11.88 11.88 0 0 0 12 0C5.37 0 0 5.37 0 12c0 2.11.55 4.17 1.6 6L0 24l6.16-1.62A11.94 11.94 0 0 0 12 24c6.63 0 12-5.37 12-12 0-3.2-1.25-6.2-3.48-8.52zM12 22a9.9 9.9 0 0 1-5.05-1.38l-.36-.22-3.66.96.98-3.56-.24-.38A9.93 9.93 0 0 1 2 12c0-5.52 4.48-10 10-10s10 4.48 10 10-4.48 10-10 10zm5.5-7.5c-.3-.15-1.78-.88-2.06-.98-.28-.1-.48-.15-.68.15s-.78.98-.96 1.18c-.18.2-.36.22-.66.08-.3-.15-1.27-.47-2.42-1.5-.9-.8-1.5-1.78-1.68-2.08-.18-.3-.02-.46.13-.61.13-.13.3-.35.46-.53.15-.18.2-.3.3-.5.1-.2.05-.37-.03-.52-.08-.15-.68-1.64-.93-2.25-.24-.58-.48-.5-.66-.51l-.57-.01c-.2 0-.52.07-.8.37s-1.05 1.03-1.05 2.5 1.07 2.9 1.23 3.1c.15.2 2.1 3.2 5.1 4.5.71.3 1.26.48 1.69.62.71.23 1.36.2 1.87.12.57-.08 1.78-.73 2.03-1.43.25-.7.25-1.3.18-1.43-.07-.13-.27-.2-.57-.35z"/></svg>
+  </span>
+</a>
+
+<script>
+  // Nav scroll
+  const nav = document.getElementById('nav');
+  const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 40);
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  // Reveal on scroll
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // Espacios nav
+  document.querySelectorAll('.espacios-nav button').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.espacios-nav button').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const target = document.getElementById(btn.dataset.jump);
+      if (target) {
+        const y = target.getBoundingClientRect().top + window.scrollY - 100;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Observe espacios to update pill
+  const espacioMap = { e1: 0, e2: 1, e3: 2, e4: 3, e5: 4 };
+  const navBtns = document.querySelectorAll('.espacios-nav button');
+  const espObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting && espacioMap[e.target.id] !== undefined) {
+        navBtns.forEach(b => b.classList.remove('active'));
+        navBtns[espacioMap[e.target.id]].classList.add('active');
+      }
+    });
+  }, { threshold: 0.4 });
+  document.querySelectorAll('.espacio').forEach(el => espObs.observe(el));
+
+  // WA hint
+  const wa = document.getElementById('waFloat');
+  setTimeout(() => {
+    wa.classList.add('hint');
+    setTimeout(() => wa.classList.remove('hint'), 3600);
+  }, 2200);
+
+  // Make sure the hero video tries to autoplay on mobile Safari
+  const video = document.querySelector('.hero-video');
+  if (video) {
+    video.play().catch(() => {});
+  }
+
+  // ── Galería marquee infinito ──
+  (function () {
+    const track = document.getElementById('galTrack');
+    Array.from(track.children).forEach(slide => {
+      track.appendChild(slide.cloneNode(true));
+    });
+  })();
+</script>
+
+</body>
+</html>
