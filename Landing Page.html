@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Quintas Espacio Álvarez — Hospedaje y Eventos en Francisco Álvarez</title>
-<meta name="description" content="Quintas para  Hospedaje y eventos en Francisco Álvarez. Naturaleza, piscina, quincho y arquitectura contemporánea en 4.000 m² a 44 km de CABA.">
+<meta name="description" content="Quinta para descansar y disfrutar en zona oeste, a 44 km de CABA. Parque con pileta, quincho, parrilla y 3 habitaciones en Francisco Álvarez. Celebraciones tranquilas, escapadas familiares y tiempo con amigos.">
 <link rel="icon" href="assets/logo.png" type="image/png">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -164,7 +164,7 @@
   .hero-overlay {
     position: absolute; inset: 0;
     background:
-      linear-gradient(180deg, rgba(28,58,42,0.55) 0%, rgba(28,58,42,0.35) 40%, rgba(28,58,42,0.85) 100%);
+      linear-gradient(180deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.35) 40%, rgba(0,0,0,0.85) 100%);
     z-index: 1;
   }
   .hero-inner { position: relative; z-index: 2; max-width: 900px; }
@@ -180,7 +180,7 @@
   }
   .hero-title {
     font-family: 'Cormorant Garamond', serif;
-    font-weight: 300;
+    font-weight: 400;
     font-size: clamp(48px, 9vw, 112px);
     line-height: 0.98;
     letter-spacing: -0.015em;
@@ -189,14 +189,14 @@
   .hero-title em {
     font-style: italic;
     color: var(--verde-claro);
-    font-weight: 300;
+    font-weight: 400;
   }
   .hero-sub {
     font-family: 'Cormorant Garamond', serif;
     font-style: italic;
     font-size: clamp(20px, 2.4vw, 28px);
     color: var(--verde-claro);
-    font-weight: 300;
+    font-weight: 400;
     margin-bottom: 36px;
     letter-spacing: 0.01em;
   }
@@ -206,7 +206,7 @@
     color: rgba(250,247,242,0.85);
     font-size: 15.5px;
     line-height: 1.8;
-    font-weight: 300;
+    font-weight: 400;
   }
   .hero-cta-row {
     display: flex;
@@ -375,6 +375,7 @@
     margin-top: 10px;
     line-height: 1.5;
   }
+  .stat-icon { display: block; width: 28px; height: 28px; color: var(--dorado); margin-bottom: 16px; }
 
   /* ───── ESPACIOS ───── */
   .espacios { background: var(--crema-claro); }
@@ -1054,12 +1055,57 @@
     line-height: 1.2;
   }
   .conv-rule p { font-size: 14px; color: var(--texto-medio); line-height: 1.8; }
+  .conv-rule-icon { display: block; width: 36px; height: 36px; color: var(--dorado); margin-bottom: 20px; }
 
   /* ───── RESPONSIVE ───── */
   @media (max-width: 900px) {
     .section { padding: 80px 0; }
-    .nav-links { display: none; }
+    .nav-cta { display: none; }
     .nav-burger { display: block; }
+
+    /* Mobile menu panel */
+    .nav-links {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      padding: 80px 32px 36px;
+      background: rgba(245,240,232,0.97);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(184,150,90,0.2);
+      z-index: 48;
+      transform: translateY(-110%);
+      transition: transform .4s ease;
+      pointer-events: none;
+    }
+    .nav.open .nav-links {
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+    .nav-links a {
+      color: var(--texto-suave);
+      font-size: 13px;
+      padding: 16px 0;
+      border-bottom: 1px solid rgba(184,150,90,0.12);
+      letter-spacing: 0.16em;
+    }
+    .nav-links a:last-child { border-bottom: 0; }
+
+    /* Burger → X animation */
+    .nav.open .nav-burger span:nth-child(1) {
+      top: 50%;
+      transform: translateY(-50%) rotate(45deg);
+      background: var(--verde-oscuro);
+    }
+    .nav.open .nav-burger span:nth-child(2) { opacity: 0; }
+    .nav.open .nav-burger span:nth-child(3) {
+      bottom: auto;
+      top: 50%;
+      transform: translateY(-50%) rotate(-45deg);
+      background: var(--verde-oscuro);
+    }
     .intro-grid, .espacio, .espacio.reverse, .contacto-grid { grid-template-columns: 1fr; gap: 48px; }
     .adicionales-head { grid-template-columns: 1fr; gap: 16px; }
     .adicionales-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
@@ -1123,7 +1169,7 @@
     <h1 class="hero-title">Donde el tiempo<br><em>se detiene</em></h1>
     <p class="hero-sub">Quinta para descansar y disfrutar en zona oeste, a 44 km de CABA</p>
     <p class="hero-desc">
-      Una quinta en Francisco Álvarez con parque, pileta, galería con parrilla, salón cubierto y hospedaje. Pensada para recibir celebraciones que merecen un lugar a su altura.
+      Una quinta en Francisco Álvarez para descansar, disfrutar y celebrar con tranquilidad. Parque con pileta, quincho con parrilla y tres habitaciones para pasar tiempo con familia y amigos.
     </p>
     <div class="hero-cta-row">
       <a href="#espacios" class="btn btn-primary">Conocer los espacios
@@ -1152,28 +1198,53 @@
     <div class="intro-grid">
       <div class="intro-copy reveal">
         <span class="eyebrow">La Quinta</span>
-        <h2 class="section-title" style="margin-top:20px;">Un lugar para <em>habitar</em>,<br>descansar y festejar</h2>
-        <p>Quintas Espacio Álvarez nace de una convicción simple: los mejores recuerdos se construyen en lugares que respiran. Un parque propio, una arquitectura sobria de hormigón visto, y árboles que llevan décadas esperando la próxima celebración.</p>
-        <p>Cada rincón fue pensado para que la fiesta fluya sin esfuerzo: del cóctel al aire libre a la cena puertas adentro, del baño en la pileta al último brindis junto a la parrilla.</p>
-        <p>Y cuando el evento termina, la quinta sigue. Tres habitaciones con todo lo necesario para quedarse unos días, desconectarse de la ciudad y disfrutar el lugar como si fuera propio. Un fin de semana con amigos, una escapada familiar, o simplemente el placer de no tener que volver a casa esa noche.</p>
+        <h2 class="section-title" style="margin-top:20px;">Un lugar para <em>descansar</em>,<br>disfrutar y celebrar</h2>
+        <p>Quintas Espacio Álvarez es un espacio pensado para el descanso y el disfrute. Un parque propio con pileta, quincho con parrilla y tres habitaciones: todo lo necesario para pasar tiempo de calidad con familia y amigos, lejos del ritmo de la ciudad.</p>
+        <p>Ideal para celebraciones tranquilas — un cumpleaños íntimo, un almuerzo familiar, una juntada de fin de semana — donde lo importante es estar bien acompañado y sin apuro.</p>
+        <p>Cuando la celebración termina, la quinta sigue. Tres habitaciones para quedarse a dormir, desconectarse y disfrutar el lugar como si fuera propio. Una escapada familiar, un fin de semana con amigos, o simplemente el placer de no tener que volver a casa esa noche.</p>
       </div>
       <div class="intro-stats reveal">
         <div class="stat">
+          <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22V13"/>
+            <path d="M5 9l7-7 7 7"/>
+            <path d="M4 13l8-5 8 5"/>
+            <path d="M3 17l9-5 9 5"/>
+          </svg>
           <div class="stat-num">260<small>m²</small></div>
           <div class="stat-label">Parque</div>
           <div class="stat-note">Con pileta, solárium y galería con parrilla.</div>
         </div>
         <div class="stat">
+          <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 13H19V18a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-5z"/>
+            <path d="M5 13 L7.5 8 L16.5 8 L19 13"/>
+            <circle cx="8" cy="21" r="1.5"/>
+            <circle cx="16" cy="21" r="1.5"/>
+          </svg>
           <div class="stat-num">20<small>autos</small></div>
           <div class="stat-label">Estacionamiento</div>
           <div class="stat-note">Portón automático, ingreso propio.</div>
         </div>
         <div class="stat">
+          <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M2 18V12h20v6"/>
+            <path d="M2 15h20"/>
+            <path d="M5 12V9a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v3"/>
+            <path d="M13 12V9a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v3"/>
+            <path d="M2 18v2M22 18v2"/>
+          </svg>
           <div class="stat-num">3<small>hab</small></div>
           <div class="stat-label">Dormitorios</div>
           <div class="stat-note">Con Smart TV. Más 4 baños para invitados.</div>
         </div>
         <div class="stat">
+          <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/>
+            <path d="M7 2v20"/>
+            <path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3"/>
+            <path d="M21 15v7"/>
+          </svg>
           <div class="stat-num">20<small>pax</small></div>
           <div class="stat-label">Cocina completa</div>
           <div class="stat-note">Vajilla, vasos y cubiertos listos para usar.</div>
@@ -1364,16 +1435,35 @@
       </div>
       <div class="conv-rules reveal">
         <div class="conv-rule">
+          <svg class="conv-rule-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+            <line x1="23" y1="9" x2="17" y2="15"/>
+            <line x1="17" y1="9" x2="23" y2="15"/>
+          </svg>
           <span class="conv-rule-num">I.</span>
           <h4>Sin festejos nocturnos ni multitudinarios</h4>
           <p>No aceptamos fiestas nocturnas de gran escala ni reuniones multitudinarias. Preservamos la tranquilidad del lugar y del entorno.</p>
         </div>
         <div class="conv-rule">
+          <svg class="conv-rule-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"/>
+            <line x1="12" y1="1" x2="12" y2="3"/>
+            <line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="1" y1="12" x2="3" y2="12"/>
+            <line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          </svg>
           <span class="conv-rule-num">II.</span>
           <h4>Solo celebraciones tranquilas de día</h4>
           <p>Los festejos se realizan durante el día y en un clima distendido, sin música a alto volumen. El espacio invita a disfrutar sin excesos.</p>
         </div>
         <div class="conv-rule">
+          <svg class="conv-rule-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
           <span class="conv-rule-num">III.</span>
           <h4>Las noches son para descansar</h4>
           <p>Por las noches el espacio es para descansar o para reuniones pequeñas y tranquilas, sin música fuerte. El silencio es parte de lo que ofrecemos.</p>
@@ -1620,6 +1710,16 @@
     });
   }, { threshold: 0.4 });
   document.querySelectorAll('.espacio').forEach(el => espObs.observe(el));
+
+  // Mobile burger menu
+  const burger = document.querySelector('.nav-burger');
+  burger.addEventListener('click', () => {
+    nav.classList.toggle('open');
+    if (nav.classList.contains('open')) nav.classList.add('scrolled');
+  });
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => nav.classList.remove('open'));
+  });
 
   // WA hint
   const wa = document.getElementById('waFloat');
