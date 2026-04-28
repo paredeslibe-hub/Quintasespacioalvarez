@@ -1057,6 +1057,69 @@
   .conv-rule p { font-size: 14px; color: var(--texto-medio); line-height: 1.8; }
   .conv-rule-icon { display: block; width: 36px; height: 36px; color: var(--dorado); margin-bottom: 20px; }
 
+  /* ───── COMO LLEGAR ───── */
+  .como-llegar { background: var(--crema-profundo); }
+  .como-llegar .section-title { margin-bottom: 8px; }
+  .como-llegar-sub {
+    font-size: 16px;
+    color: var(--texto-medio);
+    margin-bottom: 32px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .como-llegar-sub a { color: var(--verde-medio); text-decoration: underline; text-underline-offset: 3px; }
+  .como-llegar-sub a:hover { color: var(--verde-oscuro); }
+  .mapa-wrap { border-radius: 16px; overflow: hidden; box-shadow: 0 8px 40px rgba(0,0,0,0.12); height: 460px; }
+  .mapa-wrap iframe { width: 100%; height: 100%; border: 0; display: block; }
+  .video-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--verde-medio);
+    font-size: 15px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+    font-family: inherit;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: color .2s;
+  }
+  .video-link:hover { color: var(--verde-oscuro); }
+  .video-link svg { flex-shrink: 0; }
+  .video-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.88);
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+  }
+  .video-modal.open { display: flex; }
+  .video-modal-inner { position: relative; width: 100%; max-width: 900px; border-radius: 12px; overflow: hidden; background: #000; }
+  .video-modal video { width: 100%; display: block; max-height: 80vh; }
+  .video-modal-close {
+    position: absolute;
+    top: 12px; right: 12px;
+    background: rgba(0,0,0,0.6);
+    border: none;
+    color: white;
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+  }
+  .video-modal-close:hover { background: rgba(0,0,0,0.9); }
+
   /* ───── RESPONSIVE ───── */
   @media (max-width: 900px) {
     .section { padding: 80px 0; }
@@ -1175,7 +1238,7 @@
       <a href="#espacios" class="btn btn-primary">Conocer los espacios
         <svg width="14" height="10" viewBox="0 0 14 10" fill="none"><path d="M1 5H13M13 5L9 1M13 5L9 9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
       </a>
-      <a href="#contacto" class="btn btn-ghost">Consultar disponibilidad</a>
+      <a href="#como-llegar" class="btn btn-ghost">Cómo llegar</a>
     </div>
   </div>
   <div class="hero-scroll">
@@ -1620,6 +1683,33 @@
   </div>
 </section>
 
+<!-- ═══════ CÓMO LLEGAR ═══════ -->
+<section class="section como-llegar" id="como-llegar">
+  <div class="container">
+    <span class="eyebrow">Ubicación</span>
+    <h2 class="section-title" style="margin-top:20px;">Cómo <em>llegar</em></h2>
+    <p class="como-llegar-sub">
+      Alcorta 531, Francisco Álvarez km 44, General Rodríguez, Buenos Aires &nbsp;·&nbsp;
+      <a href="https://www.google.com/maps/place/Alcorta+531,+B1748+General+Rodr%C3%ADguez,+Provincia+de+Buenos+Aires,+Argentina/@-34.5955114,-58.8790449,17z" target="_blank" rel="noopener noreferrer">Abrir en Google Maps →</a>
+    </p>
+    <p style="margin-bottom: 40px;">
+      <button class="video-link" onclick="document.getElementById('modalLlegar').classList.add('open')">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8" fill="currentColor" stroke="none"/></svg>
+        Mirá el video para saber cómo llegar
+      </button>
+    </p>
+    <div class="mapa-wrap">
+      <iframe
+        src="https://maps.google.com/maps?q=-34.5955114,-58.8790449&z=16&output=embed"
+        allowfullscreen
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Ubicación de Quintas Espacio Álvarez">
+      </iframe>
+    </div>
+  </div>
+</section>
+
 <!-- ═══════ FOOTER ═══════ -->
 <footer>
   <div class="container">
@@ -1741,6 +1831,31 @@
       track.appendChild(slide.cloneNode(true));
     });
   })();
+</script>
+
+<!-- Modal video cómo llegar -->
+<div class="video-modal" id="modalLlegar">
+  <div class="video-modal-inner">
+    <button class="video-modal-close" onclick="cerrarModal()" aria-label="Cerrar">&#x2715;</button>
+    <video id="videoLlegar" controls playsinline>
+      <source src="assets/01-como-llegar.mp4" type="video/mp4">
+    </video>
+  </div>
+</div>
+<script>
+  function cerrarModal() {
+    const modal = document.getElementById('modalLlegar');
+    const vid = document.getElementById('videoLlegar');
+    modal.classList.remove('open');
+    vid.pause();
+    vid.currentTime = 0;
+  }
+  document.getElementById('modalLlegar').addEventListener('click', function(e) {
+    if (e.target === this) cerrarModal();
+  });
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') cerrarModal();
+  });
 </script>
 
 </body>
