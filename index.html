@@ -1217,6 +1217,16 @@
     .intro-grid, .espacio, .espacio.reverse, .contacto-grid { grid-template-columns: 1fr; gap: 48px; }
     .adicionales-head { grid-template-columns: 1fr; gap: 16px; }
     .adicionales-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+    .ad-tile::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: rgba(0, 0, 0, 0.38);
+      z-index: 1;
+    }
+    .ad-tile::after {
+      background: linear-gradient(180deg, transparent 30%, rgba(10,30,20,0.97) 100%);
+    }
+    .ad-tile .ad-num, .ad-tile .ad-label { z-index: 2; }
     .adicionales-foot { padding: 24px 24px; flex-direction: column; align-items: flex-start; }
     .adicionales-foot p { font-size: 18px; }
     .espacio.reverse .espacio-media { order: 0; }
@@ -1273,11 +1283,11 @@
   </video>
   <div class="hero-overlay"></div>
   <div class="hero-inner">
-    <div class="eyebrow hero-eyebrow">Francisco Álvarez · <span style="white-space:nowrap">Buenos Aires</span></div>
+    <div class="eyebrow hero-eyebrow">Quintas Espacio Álvarez</div>
     <h1 class="hero-title">Donde el tiempo<br><em>se detiene</em></h1>
-    <p class="hero-sub">Quinta para descansar y disfrutar en <span style="white-space:nowrap">Francisco Álvarez km. 44 Bs. As.</span></p>
+    <p class="hero-sub">Quinta para descansar y disfrutar en <span style="white-space:nowrap">Acc. Oeste km. 44 Bs. As.</span></p>
     <p class="hero-desc">
-      Una quinta en Francisco Álvarez para descansar, disfrutar y celebrar con tranquilidad. Parque con pileta, quincho con parrilla y tres habitaciones para pasar tiempo con familia&nbsp;y&nbsp;amigos.
+      Un espacio en Francisco Álvarez para desconectarse de la ciudad con todo el confort. Parque con pileta, quincho con parrilla y tres habitaciones con aire acondicionado, Smart TV y placard, para pasar tiempo de calidad con familia&nbsp;y&nbsp;amigos.
     </p>
     <div class="hero-cta-row">
       <a href="#espacios" class="btn btn-primary">Conocer los espacios
@@ -1451,12 +1461,15 @@
         <span class="eyebrow">04 · Puertas adentro</span>
         <h3 class="espacio-name">El Salón <em>7 × 9,5</em></h3>
         <p class="espacio-sub">Salón cubierto con cocina integrada</p>
-        <p class="espacio-desc">Salón cubierto de 7 × 9,5 m con cocina integrada, living con sillón y Smart TV 55". Cocina completa con vajilla, cubiertos y vasos para 20 personas, pava eléctrica, heladera y freezer. El refugio para cuando baja la temperatura o la noche se hace larga.</p>
+        <p class="espacio-desc">Salón cubierto de 7 × 9,5 m con cocina integrada, living con sillón y Smart TV 55". Cocina completa con vajilla, cubiertos y vasos para 20 personas, heladera, freezer, horno, anafe, microondas, cafetera, tostadora y pava eléctrica. Aire acondicionado frío/calor. El refugio para cuando baja la temperatura o la noche se hace larga.</p>
         <ul class="espacio-features">
           <li>Salón 7 × 9,5 m</li>
           <li>Cocina integrada y completa</li>
           <li>Vajilla para 20 personas</li>
           <li>Heladera + freezer</li>
+          <li>Horno · Anafe · Microondas</li>
+          <li>Cafetera · Tostadora · Pava eléctrica</li>
+          <li>Aire acondicionado frío/calor</li>
           <li>Living con Smart TV 55"</li>
           <li>2 baños para invitados</li>
           <li>Wifi y música moderada</li>
@@ -1480,6 +1493,10 @@
           <li>Colchones nuevos</li>
           <li>Frazadas, sábanas y almohadas</li>
           <li>Capacidad hasta 10 camas</li>
+          <li>Smart TV</li>
+          <li>Placard</li>
+          <li>Ventiladores</li>
+          <li>Aire Acondicionado Frío/Calor</li>
         </ul>
       </div>
     </article>
