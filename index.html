@@ -1,12 +1,40 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Quintas Espacio Álvarez — Hospedaje y Eventos en Francisco Álvarez</title>
-<meta name="description" content="Quinta para descansar y disfrutar en zona oeste, a 44 km de CABA. Parque con pileta, quincho, parrilla y 3 habitaciones en Francisco Álvarez. Celebraciones tranquilas, escapadas familiares y tiempo con amigos.">
+<title>Quintas Espacio Ãlvarez â€” Hospedaje y Eventos en Francisco Ãlvarez</title>
+<meta name="description" content="Quinta para descansar y disfrutar en zona oeste, a 44 km de CABA. Parque con pileta, quincho, parrilla y 3 habitaciones en Francisco Ãlvarez. Celebraciones tranquilas, escapadas familiares y tiempo con amigos.">
 <link rel="icon" href="assets/logo.png" type="image/png">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="apple-touch-icon" href="assets/logo.png">
+<link rel="canonical" href="https://quintas.espacioalvarez.com.ar/">
+<meta name="robots" content="index, follow">
+<meta name="google-site-verification" content="hzhq88W7eMPCeXD5gFgNBGz-njkZ1IvAS_xi2OZnuH4">
+<meta name="theme-color" content="#1C3A2A">
+
+<!-- Open Graph -->
+<meta property="og:type"        content="website">
+<meta property="og:url"         content="https://quintas.espacioalvarez.com.ar/">
+<meta property="og:title"       content="Quintas Espacio Ãlvarez â€” Hospedaje y Eventos en Francisco Ãlvarez">
+<meta property="og:description" content="Quinta para descansar y disfrutar en zona oeste, a 44 km de CABA. Parque con pileta, quincho, parrilla y 3 habitaciones en Francisco Ãlvarez.">
+<meta property="og:image"       content="https://quintas.espacioalvarez.com.ar/assets/og-image.jpg">
+<meta property="og:image:width"  content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale"      content="es_AR">
+<meta property="og:site_name"   content="Quintas Espacio Ãlvarez">
+
+<!-- Twitter Card -->
+<meta name="twitter:card"        content="summary_large_image">
+<meta name="twitter:title"       content="Quintas Espacio Ãlvarez â€” Hospedaje y Eventos en Francisco Ãlvarez">
+<meta name="twitter:description" content="Quinta para descansar y disfrutar en zona oeste, a 44 km de CABA. Parque con pileta, quincho, parrilla y 3 habitaciones en Francisco Ãlvarez.">
+<meta name="twitter:image"       content="https://quintas.espacioalvarez.com.ar/assets/og-image.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Quicksand:wght@300;400;500;600&display=swap">
+<link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Quicksand:wght@300;400;500;600&display=swap">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Quicksand:wght@300;400;500;600&display=swap"></noscript>
+<link rel="preload" as="image" href="assets/pileta-noche.webp" type="image/webp" fetchpriority="high">
 <style>
   :root {
     --verde-oscuro: #1C3A2A;
@@ -39,7 +67,7 @@
   img, video { max-width: 100%; display: block; }
   a { color: inherit; text-decoration: none; }
 
-  /* ───── UTILITIES ───── */
+  /* â”€â”€â”€â”€â”€ UTILITIES â”€â”€â”€â”€â”€ */
   .serif { font-family: 'Cormorant Garamond', serif; font-weight: 300; }
   .eyebrow {
     font-size: 11px;
@@ -59,7 +87,7 @@
     padding: 0 32px;
   }
 
-  /* ───── NAV ───── */
+  /* â”€â”€â”€â”€â”€ NAV â”€â”€â”€â”€â”€ */
   .nav {
     position: fixed; top: 0; left: 0; right: 0;
     z-index: 50;
@@ -143,7 +171,7 @@
   .nav-burger span:nth-child(2) { top: 50%; transform: translateY(-50%); }
   .nav-burger span:nth-child(3) { bottom: 4px; }
 
-  /* ───── HERO ───── */
+  /* â”€â”€â”€â”€â”€ HERO â”€â”€â”€â”€â”€ */
   .hero {
     position: relative;
     min-height: 100vh;
@@ -269,7 +297,7 @@
     50% { opacity: 1; transform: scaleY(1.3); }
   }
 
-  /* ───── MARQUEE ───── */
+  /* â”€â”€â”€â”€â”€ MARQUEE â”€â”€â”€â”€â”€ */
   .marquee {
     background: var(--verde-oscuro);
     color: var(--verde-claro);
@@ -289,14 +317,14 @@
   }
   .marquee-track span { display: inline-flex; align-items: center; gap: 72px; }
   .marquee-track span::after {
-    content: '✦';
+    content: 'âœ¦';
     font-size: 10px;
     font-style: normal;
     color: var(--dorado);
   }
   @keyframes marquee { to { transform: translateX(-50%); } }
 
-  /* ───── SECTION BASE ───── */
+  /* â”€â”€â”€â”€â”€ SECTION BASE â”€â”€â”€â”€â”€ */
   .section { padding: 120px 0; }
   .section-head { max-width: 720px; margin-bottom: 72px; }
   .section-head .eyebrow { margin-bottom: 20px; display: block; }
@@ -317,7 +345,7 @@
     max-width: 620px;
   }
 
-  /* ───── INTRO / VALUES ───── */
+  /* â”€â”€â”€â”€â”€ INTRO / VALUES â”€â”€â”€â”€â”€ */
   .intro {
     background: var(--crema-profundo);
   }
@@ -377,7 +405,7 @@
   }
   .stat-icon { display: block; width: 28px; height: 28px; color: var(--dorado); margin-bottom: 16px; }
 
-  /* ───── ESPACIOS ───── */
+  /* â”€â”€â”€â”€â”€ ESPACIOS â”€â”€â”€â”€â”€ */
   .espacios { background: var(--crema-claro); }
   .espacios-head-row {
     display: flex;
@@ -542,7 +570,7 @@
     transform: rotate(45deg);
   }
 
-  /* ───── MOMENTOS ───── */
+  /* â”€â”€â”€â”€â”€ MOMENTOS â”€â”€â”€â”€â”€ */
   .momentos {
     background: var(--verde-oscuro);
     color: var(--crema-claro);
@@ -611,7 +639,7 @@
     line-height: 1.75;
   }
 
-  /* ───── GALERÍA (MARQUEE) ───── */
+  /* â”€â”€â”€â”€â”€ GALERÃA (MARQUEE) â”€â”€â”€â”€â”€ */
   .galeria {
     background: var(--crema-profundo);
     overflow: hidden;
@@ -649,7 +677,7 @@
     display: block;
   }
 
-  /* ───── ADICIONALES ───── */
+  /* â”€â”€â”€â”€â”€ ADICIONALES â”€â”€â”€â”€â”€ */
   .adicionales {
     background: var(--crema-claro);
     position: relative;
@@ -774,7 +802,7 @@
     transform: translateY(-2px);
   }
 
-  /* ───── CONTACTO ───── */
+  /* â”€â”€â”€â”€â”€ CONTACTO â”€â”€â”€â”€â”€ */
   .contacto {
     background: var(--crema-claro);
     position: relative;
@@ -938,7 +966,7 @@
     background: rgba(184,150,90,0.08);
   }
 
-  /* ───── FOOTER ───── */
+  /* â”€â”€â”€â”€â”€ FOOTER â”€â”€â”€â”€â”€ */
   footer {
     background: var(--verde-oscuro);
     color: rgba(168,197,160,0.7);
@@ -1007,7 +1035,7 @@
     flex-wrap: wrap;
   }
 
-  /* ───── WHATSAPP FLOAT ───── */
+  /* â”€â”€â”€â”€â”€ WHATSAPP FLOAT â”€â”€â”€â”€â”€ */
   .wa-float {
     position: fixed;
     bottom: 28px; right: 28px;
@@ -1066,11 +1094,11 @@
     100% { box-shadow: 0 12px 32px rgba(37,211,102,0.4), 0 0 0 0 rgba(37,211,102,0); }
   }
 
-  /* ───── REVEAL ───── */
+  /* â”€â”€â”€â”€â”€ REVEAL â”€â”€â”€â”€â”€ */
   .reveal { opacity: 0; transform: translateY(30px); transition: opacity .9s ease, transform .9s ease; }
   .reveal.in { opacity: 1; transform: translateY(0); }
 
-  /* ───── CONVIVENCIA ───── */
+  /* â”€â”€â”€â”€â”€ CONVIVENCIA â”€â”€â”€â”€â”€ */
   .convivencia { background: var(--crema-profundo); }
   .convivencia-inner { text-align: center; }
   .conv-rules {
@@ -1102,7 +1130,7 @@
   .conv-rule p { font-size: 14px; color: var(--texto-medio); line-height: 1.8; }
   .conv-rule-icon { display: block; width: 36px; height: 36px; color: var(--dorado); margin-bottom: 20px; }
 
-  /* ───── COMO LLEGAR ───── */
+  /* â”€â”€â”€â”€â”€ COMO LLEGAR â”€â”€â”€â”€â”€ */
   .como-llegar { background: var(--crema-profundo); }
   .como-llegar .section-title { margin-bottom: 8px; }
   .como-llegar-sub {
@@ -1165,7 +1193,7 @@
   }
   .video-modal-close:hover { background: rgba(0,0,0,0.9); }
 
-  /* ───── RESPONSIVE ───── */
+  /* â”€â”€â”€â”€â”€ RESPONSIVE â”€â”€â”€â”€â”€ */
   @media (max-width: 900px) {
     .section { padding: 80px 0; }
     .nav-cta { display: none; }
@@ -1201,7 +1229,7 @@
     }
     .nav-links a:last-child { border-bottom: 0; }
 
-    /* Burger → X animation */
+    /* Burger â†’ X animation */
     .nav.open .nav-burger span:nth-child(1) {
       top: 50%;
       transform: translateY(-50%) rotate(45deg);
@@ -1256,44 +1284,44 @@
 </head>
 <body>
 
-<!-- ═══════ NAV ═══════ -->
+<!-- â•â•â•â•â•â•â• NAV â•â•â•â•â•â•â• -->
 <nav class="nav" id="nav">
   <a href="#top" class="nav-brand">
-    <img src="assets/logo.png" alt="Quintas Espacio Álvarez">
+    <img src="assets/logo.png" alt="Quintas Espacio Ãlvarez" width="42" height="42" decoding="async">
     <div class="nav-brand-text">
       <strong>Quintas</strong>
-      <small>Espacio Álvarez</small>
+      <small>Espacio Ãlvarez</small>
     </div>
   </a>
   <div class="nav-links">
     <a href="#espacios">Espacios</a>
     <a href="#momentos">Momentos</a>
     <a href="#adicionales">Adicionales</a>
-    <a href="#galeria">Galería</a>
+    <a href="#galeria">GalerÃ­a</a>
     <a href="#contacto">Contacto</a>
   </div>
   <a href="#contacto" class="nav-cta">Reservar</a>
-  <button class="nav-burger" aria-label="Menú"><span></span><span></span><span></span></button>
+  <button class="nav-burger" aria-label="MenÃº"><span></span><span></span><span></span></button>
 </nav>
 
-<!-- ═══════ HERO ═══════ -->
+<!-- â•â•â•â•â•â•â• HERO â•â•â•â•â•â•â• -->
 <section class="hero" id="top">
-  <video class="hero-video" autoplay muted loop playsinline poster="assets/pileta-noche.jpg">
+  <video class="hero-video" autoplay muted loop playsinline poster="assets/pileta-noche.webp" preload="auto">
     <source src="assets/hero-atardecer.mp4" type="video/mp4">
   </video>
   <div class="hero-overlay"></div>
   <div class="hero-inner">
-    <div class="eyebrow hero-eyebrow">Quintas Espacio Álvarez</div>
+    <div class="eyebrow hero-eyebrow">Quintas Espacio Ãlvarez</div>
     <h1 class="hero-title">Donde el tiempo<br><em>se detiene</em></h1>
     <p class="hero-sub">Quinta para descansar y disfrutar en <span style="white-space:nowrap">Acc. Oeste km. 44 Bs. As.</span></p>
     <p class="hero-desc">
-      Un espacio en Francisco Álvarez para desconectarse de la ciudad con todo el confort. Parque con pileta, quincho con parrilla y tres habitaciones con aire acondicionado, Smart TV y placard, para pasar tiempo de calidad con familia&nbsp;y&nbsp;amigos.
+      Un espacio en Francisco Ãlvarez para desconectarse de la ciudad con todo el confort. Parque con pileta, quincho con parrilla y tres habitaciones con aire acondicionado, Smart TV y placard, para pasar tiempo de calidad con familia&nbsp;y&nbsp;amigos.
     </p>
     <div class="hero-cta-row">
       <a href="#espacios" class="btn btn-primary">Conocer los espacios
         <svg width="14" height="10" viewBox="0 0 14 10" fill="none"><path d="M1 5H13M13 5L9 1M13 5L9 9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
       </a>
-      <a href="#como-llegar" class="btn btn-ghost">Cómo llegar</a>
+      <a href="#como-llegar" class="btn btn-ghost">CÃ³mo llegar</a>
     </div>
   </div>
   <div class="hero-scroll">
@@ -1301,24 +1329,24 @@
   </div>
 </section>
 
-<!-- ═══════ MARQUEE ═══════ -->
+<!-- â•â•â•â•â•â•â• MARQUEE â•â•â•â•â•â•â• -->
 <div class="marquee" aria-hidden="true">
   <div class="marquee-track">
-    <span>Casamientos</span><span>Cumpleaños</span><span>Hospedaje</span><span>Corporativos</span><span>Lanzamientos</span><span>Cenas íntimas</span><span>Producciones</span>
-    <span>Casamientos</span><span>Cumpleaños</span><span>Hospedaje</span><span>Corporativos</span><span>Lanzamientos</span><span>Cenas íntimas</span><span>Producciones</span>
+    <span>Casamientos</span><span>CumpleaÃ±os</span><span>Hospedaje</span><span>Corporativos</span><span>Lanzamientos</span><span>Cenas Ã­ntimas</span><span>Producciones</span>
+    <span>Casamientos</span><span>CumpleaÃ±os</span><span>Hospedaje</span><span>Corporativos</span><span>Lanzamientos</span><span>Cenas Ã­ntimas</span><span>Producciones</span>
   </div>
 </div>
 
-<!-- ═══════ INTRO ═══════ -->
+<!-- â•â•â•â•â•â•â• INTRO â•â•â•â•â•â•â• -->
 <section class="section intro">
   <div class="container">
     <div class="intro-grid">
       <div class="intro-copy reveal">
         <span class="eyebrow">La Quinta</span>
         <h2 class="section-title" style="margin-top:20px;">Un lugar para <em>descansar</em>,<br>disfrutar y celebrar</h2>
-        <p>Quintas Espacio Álvarez es un espacio pensado para el descanso y el disfrute. Un parque propio con pileta, quincho con parrilla y tres habitaciones: todo lo necesario para pasar tiempo de calidad con familia y amigos, lejos del ritmo de la ciudad.</p>
-        <p>Ideal para celebraciones tranquilas — un cumpleaños íntimo, un almuerzo familiar, una juntada de fin de semana — donde lo importante es estar bien acompañado y sin apuro.</p>
-        <p>Cuando la celebración termina, la quinta sigue. Tres habitaciones para quedarse a dormir, desconectarse y disfrutar el lugar como si fuera propio. Una escapada familiar, un fin de semana con amigos, o simplemente el placer de no tener que volver a casa esa noche.</p>
+        <p>Quintas Espacio Ãlvarez es un espacio pensado para el descanso y el disfrute. Un parque propio con pileta, quincho con parrilla y tres habitaciones: todo lo necesario para pasar tiempo de calidad con familia y amigos, lejos del ritmo de la ciudad.</p>
+        <p>Ideal para celebraciones tranquilas â€” un cumpleaÃ±os Ã­ntimo, un almuerzo familiar, una juntada de fin de semana â€” donde lo importante es estar bien acompaÃ±ado y sin apuro.</p>
+        <p>Cuando la celebraciÃ³n termina, la quinta sigue. Tres habitaciones para quedarse a dormir, desconectarse y disfrutar el lugar como si fuera propio. Una escapada familiar, un fin de semana con amigos, o simplemente el placer de no tener que volver a casa esa noche.</p>
       </div>
       <div class="intro-stats reveal">
         <div class="stat">
@@ -1328,9 +1356,9 @@
             <path d="M4 13l8-5 8 5"/>
             <path d="M3 17l9-5 9 5"/>
           </svg>
-          <div class="stat-num">260<small>m²</small></div>
+          <div class="stat-num">260<small>mÂ²</small></div>
           <div class="stat-label">Parque</div>
-          <div class="stat-note">Con pileta, solárium y galería con parrilla.</div>
+          <div class="stat-note">Con pileta, solÃ¡rium y galerÃ­a con parrilla.</div>
         </div>
         <div class="stat">
           <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
@@ -1341,7 +1369,7 @@
           </svg>
           <div class="stat-num">20<small>autos</small></div>
           <div class="stat-label">Estacionamiento</div>
-          <div class="stat-note">Portón automático, ingreso propio.</div>
+          <div class="stat-note">PortÃ³n automÃ¡tico, ingreso propio.</div>
         </div>
         <div class="stat">
           <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
@@ -1353,7 +1381,7 @@
           </svg>
           <div class="stat-num">3<small>hab</small></div>
           <div class="stat-label">Dormitorios</div>
-          <div class="stat-note">WiFi en todo el predio. 1 baño privado exclusivo para huéspedes.</div>
+          <div class="stat-note">WiFi en todo el predio. 1 baÃ±o privado exclusivo para huÃ©spedes.</div>
         </div>
         <div class="stat">
           <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
@@ -1371,39 +1399,42 @@
   </div>
 </section>
 
-<!-- ═══════ ESPACIOS ═══════ -->
+<!-- â•â•â•â•â•â•â• ESPACIOS â•â•â•â•â•â•â• -->
 <section class="section espacios" id="espacios">
   <div class="container">
     <div class="espacios-head-row">
       <div class="section-head reveal">
         <span class="eyebrow">Los Espacios</span>
         <h2 class="section-title" style="margin-top:20px;">Cinco ambientes,<br>una <em>misma historia</em></h2>
-        <p class="section-lead">Cada espacio tiene personalidad propia. Se combinan, se suceden, se eligen. La quinta se adapta al ritmo del evento y no al revés.</p>
+        <p class="section-lead">Cada espacio tiene personalidad propia. Se combinan, se suceden, se eligen. La quinta se adapta al ritmo del evento y no al revÃ©s.</p>
       </div>
       <div class="espacios-nav reveal" role="tablist">
         <button class="active" data-jump="e1">Quincho</button>
         <button data-jump="e2">Parque</button>
         <button data-jump="e3">Pileta</button>
-        <button data-jump="e4">Salón</button>
+        <button data-jump="e4">SalÃ³n</button>
         <button data-jump="e5">Hospedaje</button>
       </div>
     </div>
 
     <!-- ESPACIO 1 -->
     <article class="espacio reveal" id="e1">
-      <div class="espacio-media" data-num="01 · Quincho">
-        <img src="assets/quincho-gente.jpg" alt="Quincho de hormigón visto con gente reunida">
+      <div class="espacio-media" data-num="01 Â· Quincho">
+        <picture>
+  <source srcset="assets/quincho-gente.webp" type="image/webp">
+  <img src="assets/quincho-gente.jpg" alt="Quincho de hormigÃ³n visto con gente reunida" loading="lazy" decoding="async">
+</picture>
       </div>
       <div class="espacio-body">
-        <span class="eyebrow">01 · El corazón</span>
-        <h3 class="espacio-name">El Quincho <em>de hormigón</em></h3>
-        <p class="espacio-sub">Galería 9,5 × 4,5 m con parrilla grande</p>
-        <p class="espacio-desc">Galería semicubierta de hormigón visto con parrilla grande, conectada al parque y al salón principal. El espacio donde se reciben los invitados, donde se cocina a leña y donde las celebraciones se consolidan cuando cae la noche.</p>
+        <span class="eyebrow">01 Â· El corazÃ³n</span>
+        <h3 class="espacio-name">El Quincho <em>de hormigÃ³n</em></h3>
+        <p class="espacio-sub">GalerÃ­a 9,5 Ã— 4,5 m con parrilla grande</p>
+        <p class="espacio-desc">GalerÃ­a semicubierta de hormigÃ³n visto con parrilla grande, conectada al parque y al salÃ³n principal. El espacio donde se reciben los invitados, donde se cocina a leÃ±a y donde las celebraciones se consolidan cuando cae la noche.</p>
         <ul class="espacio-features">
-          <li>Galería 9,5 × 4,5 m</li>
+          <li>GalerÃ­a 9,5 Ã— 4,5 m</li>
           <li>Parrilla grande</li>
-          <li>Conexión directa al parque</li>
-          <li>Integrada al salón cubierto</li>
+          <li>ConexiÃ³n directa al parque</li>
+          <li>Integrada al salÃ³n cubierto</li>
           <li>Techo alto semicubierto</li>
           <li>Uso diurno y nocturno</li>
         </ul>
@@ -1412,41 +1443,47 @@
 
     <!-- ESPACIO 2 -->
     <article class="espacio reverse reveal" id="e2">
-      <div class="espacio-media" data-num="02 · Parque">
-        <img src="assets/parque-dia.jpg" alt="Parque de día con gazebo blanco y pufs">
+      <div class="espacio-media" data-num="02 Â· Parque">
+        <picture>
+  <source srcset="assets/parque-dia.webp" type="image/webp">
+  <img src="assets/parque-dia.jpg" alt="Parque de dÃ­a con gazebo blanco y pufs" loading="lazy" decoding="async">
+</picture>
       </div>
       <div class="espacio-body">
-        <span class="eyebrow">02 · Al aire libre</span>
-        <h3 class="espacio-name">El Parque <em>de 260 m²</em></h3>
-        <p class="espacio-sub">Césped, sombra y perspectivas largas</p>
-        <p class="espacio-desc">260 m² de parque propio que integra pileta, solárium y galería en una sola continuidad verde. Árboles que definen rincones, espacio para gazebos, mesas largas o ceremonias al aire libre.</p>
+        <span class="eyebrow">02 Â· Al aire libre</span>
+        <h3 class="espacio-name">El Parque <em>de 260 mÂ²</em></h3>
+        <p class="espacio-sub">CÃ©sped, sombra y perspectivas largas</p>
+        <p class="espacio-desc">260 mÂ² de parque propio que integra pileta, solÃ¡rium y galerÃ­a en una sola continuidad verde. Ãrboles que definen rincones, espacio para gazebos, mesas largas o ceremonias al aire libre.</p>
         <ul class="espacio-features">
-          <li>260 m² de parque</li>
-          <li>Integra pileta y solárium</li>
+          <li>260 mÂ² de parque</li>
+          <li>Integra pileta y solÃ¡rium</li>
           <li>Apto gazebos y mesas largas</li>
           <li>Sombra natural</li>
-          <li>Continuidad con la galería</li>
-          <li>Uso de día y de noche</li>
+          <li>Continuidad con la galerÃ­a</li>
+          <li>Uso de dÃ­a y de noche</li>
         </ul>
       </div>
     </article>
 
     <!-- ESPACIO 3 -->
     <article class="espacio reveal" id="e3">
-      <div class="espacio-media" data-num="03 · Pileta">
-        <img src="assets/pileta-noche.jpg" alt="Pileta iluminada al atardecer con fuente">
+      <div class="espacio-media" data-num="03 Â· Pileta">
+        <picture>
+  <source srcset="assets/pileta-noche.webp" type="image/webp">
+  <img src="assets/pileta-noche.jpg" alt="Pileta iluminada al atardecer con fuente" loading="lazy" decoding="async">
+</picture>
       </div>
       <div class="espacio-body">
-        <span class="eyebrow">03 · El agua</span>
-        <h3 class="espacio-name">La Pileta <em>10 × 4</em></h3>
-        <p class="espacio-sub">Con playa húmeda para los más chicos</p>
-        <p class="espacio-desc">Pileta de 10 × 4 m con playa húmeda para chicos, integrada al solárium de 5 × 4 m con reposeras y sillones. Protagonista al atardecer, espejo a la noche, rincón frecuente de las mejores fotos del evento.</p>
+        <span class="eyebrow">03 Â· El agua</span>
+        <h3 class="espacio-name">La Pileta <em>10 Ã— 4</em></h3>
+        <p class="espacio-sub">Con playa hÃºmeda para los mÃ¡s chicos</p>
+        <p class="espacio-desc">Pileta de 10 Ã— 4 m con playa hÃºmeda para chicos, integrada al solÃ¡rium de 5 Ã— 4 m con reposeras y sillones. Protagonista al atardecer, espejo a la noche, rincÃ³n frecuente de las mejores fotos del evento.</p>
         <ul class="espacio-features">
-          <li>Pileta 10 × 4 m</li>
-          <li>Playa húmeda para chicos</li>
-          <li>Solárium 5 × 4 m</li>
+          <li>Pileta 10 Ã— 4 m</li>
+          <li>Playa hÃºmeda para chicos</li>
+          <li>SolÃ¡rium 5 Ã— 4 m</li>
           <li>Reposeras y sillones</li>
-          <li>Iluminación nocturna</li>
+          <li>IluminaciÃ³n nocturna</li>
           <li>Continuidad con el parque</li>
         </ul>
       </div>
@@ -1454,49 +1491,55 @@
 
     <!-- ESPACIO 4 -->
     <article class="espacio reverse reveal" id="e4">
-      <div class="espacio-media" data-num="04 · Salón">
-        <img src="assets/salon2.png" alt="Salón cubierto con cocina integrada">
+      <div class="espacio-media" data-num="04 Â· SalÃ³n">
+        <picture>
+  <source srcset="assets/salon2.webp" type="image/webp">
+  <img src="assets/salon2.png" alt="SalÃ³n cubierto con cocina integrada" loading="lazy" decoding="async">
+</picture>
       </div>
       <div class="espacio-body">
-        <span class="eyebrow">04 · Puertas adentro</span>
-        <h3 class="espacio-name">El Salón <em>7 × 9,5</em></h3>
-        <p class="espacio-sub">Salón cubierto con cocina integrada</p>
-        <p class="espacio-desc">Salón cubierto de 7 × 9,5 m con cocina integrada, living con sillón y Smart TV 55". Cocina completa con vajilla, cubiertos y vasos para 20 personas, heladera, freezer, horno, anafe, microondas, cafetera, tostadora y pava eléctrica. Aire acondicionado frío/calor. El refugio para cuando baja la temperatura o la noche se hace larga.</p>
+        <span class="eyebrow">04 Â· Puertas adentro</span>
+        <h3 class="espacio-name">El SalÃ³n <em>7 Ã— 9,5</em></h3>
+        <p class="espacio-sub">SalÃ³n cubierto con cocina integrada</p>
+        <p class="espacio-desc">SalÃ³n cubierto de 7 Ã— 9,5 m con cocina integrada, living con sillÃ³n y Smart TV 55". Cocina completa con vajilla, cubiertos y vasos para 20 personas, heladera, freezer, horno, anafe, microondas, cafetera, tostadora y pava elÃ©ctrica. Aire acondicionado frÃ­o/calor. El refugio para cuando baja la temperatura o la noche se hace larga.</p>
         <ul class="espacio-features">
-          <li>Salón 7 × 9,5 m</li>
+          <li>SalÃ³n 7 Ã— 9,5 m</li>
           <li>Cocina integrada y completa</li>
           <li>Vajilla para 20 personas</li>
           <li>Heladera + freezer</li>
-          <li>Horno · Anafe · Microondas</li>
-          <li>Cafetera · Tostadora · Pava eléctrica</li>
-          <li>Aire acondicionado frío/calor</li>
+          <li>Horno Â· Anafe Â· Microondas</li>
+          <li>Cafetera Â· Tostadora Â· Pava elÃ©ctrica</li>
+          <li>Aire acondicionado frÃ­o/calor</li>
           <li>Living con Smart TV 55"</li>
-          <li>2 baños para invitados</li>
-          <li>Wifi y música moderada</li>
+          <li>2 baÃ±os para invitados</li>
+          <li>Wifi y mÃºsica moderada</li>
         </ul>
       </div>
     </article>
 
     <!-- ESPACIO 5 -->
     <article class="espacio reveal" id="e5">
-      <div class="espacio-media" data-num="05 · Hospedaje">
-        <img src="assets/habitacion-nueva.png" alt="Habitación con camas y ropa de cama">
+      <div class="espacio-media" data-num="05 Â· Hospedaje">
+        <picture>
+  <source srcset="assets/habitacion-nueva.webp" type="image/webp">
+  <img src="assets/habitacion-nueva.png" alt="HabitaciÃ³n con camas y ropa de cama" loading="lazy" decoding="async">
+</picture>
       </div>
       <div class="espacio-body">
-        <span class="eyebrow">05 · Descanso</span>
-        <h3 class="espacio-name">3 Habitaciones <em>con baño privado</em></h3>
-        <p class="espacio-sub">Exclusivo para huéspedes que se quedan a dormir</p>
-        <p class="espacio-desc">Las habitaciones cuentan con 1 baño privado exclusivo para los huéspedes que se alojan en la quinta. Colchones nuevos, frazadas, sábanas y almohadas: todo el confort que necesitás para pasar unos días de descanso real. Capacidad para hasta 10 personas.</p>
+        <span class="eyebrow">05 Â· Descanso</span>
+        <h3 class="espacio-name">3 Habitaciones <em>con baÃ±o privado</em></h3>
+        <p class="espacio-sub">Exclusivo para huÃ©spedes que se quedan a dormir</p>
+        <p class="espacio-desc">Las habitaciones cuentan con 1 baÃ±o privado exclusivo para los huÃ©spedes que se alojan en la quinta. Colchones nuevos, frazadas, sÃ¡banas y almohadas: todo el confort que necesitÃ¡s para pasar unos dÃ­as de descanso real. Capacidad para hasta 10 personas.</p>
         <ul class="espacio-features">
           <li>3 habitaciones</li>
-          <li>1 baño privado exclusivo</li>
+          <li>1 baÃ±o privado exclusivo</li>
           <li>Colchones nuevos</li>
-          <li>Frazadas, sábanas y almohadas</li>
+          <li>Frazadas, sÃ¡banas y almohadas</li>
           <li>Capacidad hasta 10 camas</li>
           <li>Smart TV</li>
           <li>Placard</li>
           <li>Ventiladores</li>
-          <li>Aire Acondicionado Frío/Calor</li>
+          <li>Aire Acondicionado FrÃ­o/Calor</li>
         </ul>
       </div>
     </article>
@@ -1504,34 +1547,34 @@
   </div>
 </section>
 
-<!-- ═══════ MOMENTOS ═══════ -->
+<!-- â•â•â•â•â•â•â• MOMENTOS â•â•â•â•â•â•â• -->
 <section class="section momentos" id="momentos">
   <div class="container">
     <div class="section-head reveal">
-      <span class="eyebrow">Qué celebramos</span>
+      <span class="eyebrow">QuÃ© celebramos</span>
       <h2 class="section-title" style="margin-top:20px;">Cada evento tiene<br>su <em>propio tiempo</em></h2>
-      <p class="section-lead">Adaptamos la quinta al tipo de celebración. Estos son los formatos que mejor conocemos, aunque nunca decimos que no a una idea nueva.</p>
+      <p class="section-lead">Adaptamos la quinta al tipo de celebraciÃ³n. Estos son los formatos que mejor conocemos, aunque nunca decimos que no a una idea nueva.</p>
     </div>
     <div class="momentos-grid">
       <div class="momento reveal">
         <span class="momento-num">I.</span>
         <h3 class="momento-name">Casamientos <em>& civiles</em></h3>
-        <p class="momento-desc">Ceremonia al aire libre, cóctel entre árboles, fiesta puertas adentro. Un mismo lugar acompaña las tres etapas sin que nadie tenga que moverse en auto.</p>
+        <p class="momento-desc">Ceremonia al aire libre, cÃ³ctel entre Ã¡rboles, fiesta puertas adentro. Un mismo lugar acompaÃ±a las tres etapas sin que nadie tenga que moverse en auto.</p>
       </div>
       <div class="momento reveal">
         <span class="momento-num">II.</span>
-        <h3 class="momento-name">Cumpleaños <em>significativos</em></h3>
-        <p class="momento-desc">15, 40, 50, 70. Las fechas redondas merecen un marco distinto. Capacidad y flexibilidad para formatos íntimos o de gran escala.</p>
+        <h3 class="momento-name">CumpleaÃ±os <em>significativos</em></h3>
+        <p class="momento-desc">15, 40, 50, 70. Las fechas redondas merecen un marco distinto. Capacidad y flexibilidad para formatos Ã­ntimos o de gran escala.</p>
       </div>
       <div class="momento reveal">
         <span class="momento-num">III.</span>
         <h3 class="momento-name">Eventos <em>corporativos</em></h3>
-        <p class="momento-desc">Team buildings, lanzamientos, fiestas de fin de año. Infraestructura para presentaciones formales y clima distendido para el after.</p>
+        <p class="momento-desc">Team buildings, lanzamientos, fiestas de fin de aÃ±o. Infraestructura para presentaciones formales y clima distendido para el after.</p>
       </div>
       <div class="momento reveal">
         <span class="momento-num">IV.</span>
-        <h3 class="momento-name">Cenas <em>íntimas</em></h3>
-        <p class="momento-desc">Mesa larga en la galería o al aire libre, servicio cuidado y sobremesa sin apuro. Cocina completa y vajilla para 20 personas incluidas.</p>
+        <h3 class="momento-name">Cenas <em>Ã­ntimas</em></h3>
+        <p class="momento-desc">Mesa larga en la galerÃ­a o al aire libre, servicio cuidado y sobremesa sin apuro. Cocina completa y vajilla para 20 personas incluidas.</p>
       </div>
       <div class="momento reveal">
         <span class="momento-num">V.</span>
@@ -1541,20 +1584,20 @@
       <div class="momento reveal">
         <span class="momento-num">VI.</span>
         <h3 class="momento-name">Retiros <em>y talleres</em></h3>
-        <p class="momento-desc">Yoga, gastronomía, bienestar. Un día entero fuera de la ciudad, con la logística y el silencio que este tipo de encuentros necesitan.</p>
+        <p class="momento-desc">Yoga, gastronomÃ­a, bienestar. Un dÃ­a entero fuera de la ciudad, con la logÃ­stica y el silencio que este tipo de encuentros necesitan.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══════ CONVIVENCIA ═══════ -->
+<!-- â•â•â•â•â•â•â• CONVIVENCIA â•â•â•â•â•â•â• -->
 <section class="section convivencia">
   <div class="container">
     <div class="convivencia-inner">
       <div class="section-head reveal" style="margin: 0 auto; max-width:680px;">
-        <span class="eyebrow">Cómo convivimos</span>
+        <span class="eyebrow">CÃ³mo convivimos</span>
         <h2 class="section-title" style="margin-top:20px;">Un espacio para <em>descansar</em><br>y celebrar con calma</h2>
-        <p class="section-lead" style="margin: 0 auto;">Quintas Espacio Álvarez es un lugar pensado para el descanso y las celebraciones tranquilas. Para preservar ese espíritu — y el de quienes nos rodean — pedimos respetar las siguientes condiciones.</p>
+        <p class="section-lead" style="margin: 0 auto;">Quintas Espacio Ãlvarez es un lugar pensado para el descanso y las celebraciones tranquilas. Para preservar ese espÃ­ritu â€” y el de quienes nos rodean â€” pedimos respetar las siguientes condiciones.</p>
       </div>
       <div class="conv-rules reveal">
         <div class="conv-rule">
@@ -1580,8 +1623,8 @@
             <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
           </svg>
           <span class="conv-rule-num">II.</span>
-          <h4>Solo celebraciones tranquilas de día</h4>
-          <p>Los festejos se realizan durante el día y en un clima distendido, sin música a alto volumen. El espacio invita a disfrutar sin excesos.</p>
+          <h4>Solo celebraciones tranquilas de dÃ­a</h4>
+          <p>Los festejos se realizan durante el dÃ­a y en un clima distendido, sin mÃºsica a alto volumen. El espacio invita a disfrutar sin excesos.</p>
         </div>
         <div class="conv-rule">
           <svg class="conv-rule-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
@@ -1589,50 +1632,107 @@
           </svg>
           <span class="conv-rule-num">III.</span>
           <h4>Las noches son para descansar</h4>
-          <p>Por las noches el espacio es para descansar o para reuniones pequeñas y tranquilas, sin música fuerte. El silencio es parte de lo que ofrecemos.</p>
+          <p>Por las noches el espacio es para descansar o para reuniones pequeÃ±as y tranquilas, sin mÃºsica fuerte. El silencio es parte de lo que ofrecemos.</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══════ GALERÍA ═══════ -->
+<!-- â•â•â•â•â•â•â• GALERÃA â•â•â•â•â•â•â• -->
 <section class="section galeria" id="galeria">
   <div class="container">
     <div class="section-head reveal">
-      <span class="eyebrow">Galería</span>
+      <span class="eyebrow">GalerÃ­a</span>
       <h2 class="section-title" style="margin-top:20px;">La quinta, <em>en instantes</em></h2>
-      <p class="section-lead">Fragmentos de la quinta en uso. Una idea del clima que se arma, a cualquier hora del día.</p>
+      <p class="section-lead">Fragmentos de la quinta en uso. Una idea del clima que se arma, a cualquier hora del dÃ­a.</p>
     </div>
 
   </div><!-- /container -->
 
   <div class="galeria-viewport">
     <div class="galeria-track" id="galTrack">
-      <div class="slide"><img src="assets/pileta-noche.jpg" alt="Pileta iluminada al atardecer"></div>
-      <div class="slide"><img src="assets/parque-dia.jpg" alt="Parque de día"></div>
-      <div class="slide"><img src="assets/quincho-gente.jpg" alt="Quincho con gente reunida"></div>
-      <div class="slide"><img src="assets/salon2.png" alt="Barra de bebidas y living"></div>
-      <div class="slide"><img src="assets/dj-atardecer.jpg" alt="DJ al atardecer"></div>
-      <div class="slide"><img src="assets/jardin-pool.jpg" alt="Jardín con pool table"></div>
-      <div class="slide"><img src="assets/gal-pileta-noche.jpg" alt="Pileta de noche con guirnaldas"></div>
-      <div class="slide"><img src="assets/gal-evento.jpg" alt="Evento con amigos en el salón"></div>
-      <div class="slide"><img src="assets/gal-parrilla.jpg" alt="Hogar encendido y reunión de noche"></div>
-      <div class="slide"><img src="assets/gal-juegos.jpg" alt="Pool y metegol en el quincho"></div>
-      <div class="slide"><img src="assets/gal-inflable.jpg" alt="Inflable acuático junto a la pileta"></div>
-      <div class="slide"><img src="assets/gal-pileta-dia.jpg" alt="Pileta de día con reposeras"></div>
-      <div class="slide"><img src="assets/ad-gazebo.jpg" alt="Gazebos en el parque"></div>
-      <div class="slide"><img src="assets/ad-inflable.jpg" alt="Inflable acuático"></div>
-      <div class="slide"><img src="assets/ad-juegos.jpg" alt="Pool y metegol de salón"></div>
-      <div class="slide"><img src="assets/ad-dj.jpg" alt="DJ tocando en vivo"></div>
-      <div class="slide"><img src="assets/ad-barra2.jpg" alt="Barra móvil con bartenders"></div>
-      <div class="slide"><img src="assets/habitacion-nueva.png" alt="Habitación con camas cuchetas"></div>
-      <div class="slide"><img src="assets/habitacion-nueva.png" alt="Habitación con placarón y cuchetas"></div>
+      <div class="slide"><picture>
+  <source srcset="assets/pileta-noche.webp" type="image/webp">
+  <img src="assets/pileta-noche.jpg" alt="Pileta iluminada al atardecer" loading="lazy" decoding="async">
+</picture></div>
+      <div class="slide"><picture>
+  <source srcset="assets/parque-dia.webp" type="image/webp">
+  <img src="assets/parque-dia.jpg" alt="Parque de dÃ­a" loading="lazy" decoding="async">
+</picture></div>
+      <div class="slide"><picture>
+  <source srcset="assets/quincho-gente.webp" type="image/webp">
+  <img src="assets/quincho-gente.jpg" alt="Quincho con gente reunida" loading="lazy" decoding="async">
+</picture></div>
+      <div class="slide"><picture>
+  <source srcset="assets/salon2.webp" type="image/webp">
+  <img src="assets/salon2.png" alt="Barra de bebidas y living" loading="lazy" decoding="async">
+</picture></div>
+      <div class="slide"><picture>
+  <source srcset="assets/dj-atardecer.webp" type="image/webp">
+  <img src="assets/dj-atardecer.jpg" alt="DJ al atardecer" loading="lazy" decoding="async">
+</picture></div>
+      <div class="slide"><picture>
+  <source srcset="assets/jardin-pool.webp" type="image/webp">
+  <img src="assets/jardin-pool.jpg" alt="JardÃ­n con pool table" loading="lazy" decoding="async">
+</picture></div>
+      <div class="slide"><picture>
+  <source srcset="assets/gal-pileta-noche.webp" type="image/webp">
+  <img src="assets/gal-pileta-noche.jpg" alt="Pileta de noche con guirnaldas" loading="lazy" decoding="async">
+</picture></div>
+      <div class="slide"><picture>
+  <source srcset="assets/gal-evento.webp" type="image/webp">
+  <img src="assets/gal-evento.jpg" alt="Evento con amigos en el salÃ³n" loading="lazy" decoding="async">
+</picture></div>
+      <div class="slide"><picture>
+  <source srcset="assets/gal-parrilla.webp" type="image/webp">
+  <img src="assets/gal-parrilla.jpg" alt="Hogar encendido y reuniÃ³n de noche" loading="lazy" decoding="async">
+</picture></div>
+      <div class="slide"><picture>
+  <source srcset="assets/gal-juegos.webp" type="image/webp">
+  <img src="assets/gal-juegos.jpg" alt="Pool y metegol en el quincho" loading="lazy" decoding="async">
+</picture></div>
+      <div class="slide"><picture>
+  <source srcset="assets/gal-inflable.webp" type="image/webp">
+  <img src="assets/gal-inflable.jpg" alt="Inflable acuÃ¡tico junto a la pileta" loading="lazy" decoding="async">
+</picture></div>
+      <div class="slide"><picture>
+  <source srcset="assets/gal-pileta-dia.webp" type="image/webp">
+  <img src="assets/gal-pileta-dia.jpg" alt="Pileta de dÃ­a con reposeras" loading="lazy" decoding="async">
+</picture></div>
+      <div class="slide"><picture>
+  <source srcset="assets/ad-gazebo.webp" type="image/webp">
+  <img src="assets/ad-gazebo.jpg" alt="Gazebos en el parque" loading="lazy" decoding="async">
+</picture></div>
+      <div class="slide"><picture>
+  <source srcset="assets/ad-inflable.webp" type="image/webp">
+  <img src="assets/ad-inflable.jpg" alt="Inflable acuÃ¡tico" loading="lazy" decoding="async">
+</picture></div>
+      <div class="slide"><picture>
+  <source srcset="assets/ad-juegos.webp" type="image/webp">
+  <img src="assets/ad-juegos.jpg" alt="Pool y metegol de salÃ³n" loading="lazy" decoding="async">
+</picture></div>
+      <div class="slide"><picture>
+  <source srcset="assets/ad-dj.webp" type="image/webp">
+  <img src="assets/ad-dj.jpg" alt="DJ tocando en vivo" loading="lazy" decoding="async">
+</picture></div>
+      <div class="slide"><picture>
+  <source srcset="assets/ad-barra2.webp" type="image/webp">
+  <img src="assets/ad-barra2.jpg" alt="Barra mÃ³vil con bartenders" loading="lazy" decoding="async">
+</picture></div>
+      <div class="slide"><picture>
+  <source srcset="assets/habitacion-nueva.webp" type="image/webp">
+  <img src="assets/habitacion-nueva.png" alt="HabitaciÃ³n con camas cuchetas" loading="lazy" decoding="async">
+</picture></div>
+      <div class="slide"><picture>
+  <source srcset="assets/habitacion-nueva.webp" type="image/webp">
+  <img src="assets/habitacion-nueva.png" alt="HabitaciÃ³n con placarÃ³n y cuchetas" loading="lazy" decoding="async">
+</picture></div>
     </div>
   </div>
 </section>
 
-<!-- ═══════ ADICIONALES ═══════ -->
+<!-- â•â•â•â•â•â•â• ADICIONALES â•â•â•â•â•â•â• -->
 <section class="section adicionales" id="adicionales">
   <div class="container">
     <div class="adicionales-head reveal">
@@ -1640,44 +1740,62 @@
         <span class="eyebrow">Nos encargamos de todo</span>
         <h2 class="section-title">Lo que <em>imagines</em>,<br>lo armamos</h2>
       </div>
-      <p class="section-lead">Contanos qué necesitás y lo ponemos a disposición. Trabajamos con proveedores de confianza para que solo te ocupes de disfrutar.</p>
+      <p class="section-lead">Contanos quÃ© necesitÃ¡s y lo ponemos a disposiciÃ³n. Trabajamos con proveedores de confianza para que solo te ocupes de disfrutar.</p>
     </div>
 
     <div class="adicionales-grid">
       <div class="ad-tile reveal">
-        <img src="assets/ad-gazebo.jpg" alt="Gazebos y livings en el parque">
+        <picture>
+  <source srcset="assets/ad-gazebo.webp" type="image/webp">
+  <img src="assets/ad-gazebo.jpg" alt="Gazebos y livings en el parque" loading="lazy" decoding="async">
+</picture>
         <span class="ad-num">I.</span>
         <div class="ad-label"><strong>Gazebos <em>& livings</em></strong><span>Mobiliario de exterior</span></div>
       </div>
       <div class="ad-tile reveal">
-        <img src="assets/ad-inflable.jpg" alt="Inflable acuático junto a la pileta">
+        <picture>
+  <source srcset="assets/ad-inflable.webp" type="image/webp">
+  <img src="assets/ad-inflable.jpg" alt="Inflable acuÃ¡tico junto a la pileta" loading="lazy" decoding="async">
+</picture>
         <span class="ad-num">II.</span>
-        <div class="ad-label"><strong>Inflables <em>acuáticos</em></strong><span>Para grandes y chicos</span></div>
+        <div class="ad-label"><strong>Inflables <em>acuÃ¡ticos</em></strong><span>Para grandes y chicos</span></div>
       </div>
       <div class="ad-tile reveal">
-        <img src="assets/ad-juegos.jpg" alt="Pool y metegol">
+        <picture>
+  <source srcset="assets/ad-juegos.webp" type="image/webp">
+  <img src="assets/ad-juegos.jpg" alt="Pool y metegol" loading="lazy" decoding="async">
+</picture>
         <span class="ad-num">III.</span>
-        <div class="ad-label"><strong>Pool &amp; <em>metegol</em></strong><span>Juegos de salón</span></div>
+        <div class="ad-label"><strong>Pool &amp; <em>metegol</em></strong><span>Juegos de salÃ³n</span></div>
       </div>
       <div class="ad-tile reveal">
-        <img src="assets/ad-barra2.jpg" alt="Barra móvil con bartenders">
+        <picture>
+  <source srcset="assets/ad-barra2.webp" type="image/webp">
+  <img src="assets/ad-barra2.jpg" alt="Barra mÃ³vil con bartenders" loading="lazy" decoding="async">
+</picture>
         <span class="ad-num">IV.</span>
-        <div class="ad-label"><strong>Barras <em>móviles</em></strong><span>Coctelería de autor</span></div>
+        <div class="ad-label"><strong>Barras <em>mÃ³viles</em></strong><span>CoctelerÃ­a de autor</span></div>
       </div>
       <div class="ad-tile reveal">
-        <img src="assets/ad-dj.jpg" alt="DJ tocando al atardecer bajo el árbol">
+        <picture>
+  <source srcset="assets/ad-dj.webp" type="image/webp">
+  <img src="assets/ad-dj.jpg" alt="DJ tocando al atardecer bajo el Ã¡rbol" loading="lazy" decoding="async">
+</picture>
         <span class="ad-num">V.</span>
-        <div class="ad-label"><strong>DJ <em>& sonido</em></strong><span>Música en vivo</span></div>
+        <div class="ad-label"><strong>DJ <em>& sonido</em></strong><span>MÃºsica en vivo</span></div>
       </div>
       <div class="ad-tile reveal">
-        <img src="assets/quincho-gente.jpg" alt="Evento con catering">
+        <picture>
+  <source srcset="assets/quincho-gente.webp" type="image/webp">
+  <img src="assets/quincho-gente.jpg" alt="Evento con catering" loading="lazy" decoding="async">
+</picture>
         <span class="ad-num">VI.</span>
         <div class="ad-label"><strong>Catering <em>a medida</em></strong><span>Cocina para tu evento</span></div>
       </div>
     </div>
 
     <div class="adicionales-foot reveal">
-      <p>¿No encontrás lo que buscás? <br>Contanos qué te imaginás y lo coordinamos.</p>
+      <p>Â¿No encontrÃ¡s lo que buscÃ¡s? <br>Contanos quÃ© te imaginÃ¡s y lo coordinamos.</p>
       <a href="https://wa.me/5491161458032?text=Hola%2C%20me%20gustar%C3%ADa%20consultar%20disponibilidad%20en%20Quintas%20Espacio%20%C3%81lvarez." target="_blank" rel="noopener noreferrer" class="ad-cta">
         Armar mi evento
         <svg width="14" height="10" viewBox="0 0 14 10" fill="none"><path d="M1 5H13M13 5L9 1M13 5L9 9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
@@ -1686,28 +1804,28 @@
   </div>
 </section>
 
-<!-- ═══════ CONTACTO ═══════ -->
+<!-- â•â•â•â•â•â•â• CONTACTO â•â•â•â•â•â•â• -->
 <section class="section contacto" id="contacto">
   <div class="container">
     <div class="contacto-grid">
       <div class="contacto-copy reveal">
         <span class="eyebrow">Reservas</span>
-        <h2 class="section-title" style="margin-top:20px;">Cuéntanos qué vas a <em>celebrar</em></h2>
+        <h2 class="section-title" style="margin-top:20px;">CuÃ©ntanos quÃ© vas a <em>celebrar</em></h2>
         <p class="section-lead">Respondemos en menos de 24 horas. Repasamos fechas y armamos juntos la propuesta.</p>
 
         <div class="contacto-info">
           <div class="info-row">
-            <span class="info-key">Ubicación</span>
-            <span class="info-val">Francisco Álvarez</span>
+            <span class="info-key">UbicaciÃ³n</span>
+            <span class="info-val">Francisco Ãlvarez</span>
           </div>
           <div class="info-row">
             <span class="info-key">Provincia</span>
-            <span class="info-val">Buenos Aires · Argentina</span>
+            <span class="info-val">Buenos Aires Â· Argentina</span>
           </div>
 
           <div class="info-row">
             <span class="info-key">Responder</span>
-            <span class="info-val">&lt; 24 hs hábiles</span>
+            <span class="info-val">&lt; 24 hs hÃ¡biles</span>
           </div>
         </div>
       </div>
@@ -1715,7 +1833,7 @@
       <div class="contact-card reveal">
         <span class="eyebrow">Escribinos directo</span>
         <h3>Una charla por<br><em>WhatsApp</em></h3>
-        <p>La forma más rápida de chequear fechas disponibles y recibir el dossier con fotos, capacidades y valores. Sin compromiso.</p>
+        <p>La forma mÃ¡s rÃ¡pida de chequear fechas disponibles y recibir el dossier con fotos, capacidades y valores. Sin compromiso.</p>
         <a href="https://wa.me/5491161458032?text=Hola%2C%20me%20gustar%C3%ADa%20consultar%20disponibilidad%20en%20Quintas%20Espacio%20%C3%81lvarez." target="_blank" rel="noopener noreferrer" class="contact-cta">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.52 3.48A11.88 11.88 0 0 0 12 0C5.37 0 0 5.37 0 12c0 2.11.55 4.17 1.6 6L0 24l6.16-1.62A11.94 11.94 0 0 0 12 24c6.63 0 12-5.37 12-12 0-3.2-1.25-6.2-3.48-8.52zM12 22a9.9 9.9 0 0 1-5.05-1.38l-.36-.22-3.66.96.98-3.56-.24-.38A9.93 9.93 0 0 1 2 12c0-5.52 4.48-10 10-10s10 4.48 10 10-4.48 10-10 10zm5.5-7.5c-.3-.15-1.78-.88-2.06-.98-.28-.1-.48-.15-.68.15s-.78.98-.96 1.18c-.18.2-.36.22-.66.08-.3-.15-1.27-.47-2.42-1.5-.9-.8-1.5-1.78-1.68-2.08-.18-.3-.02-.46.13-.61.13-.13.3-.35.46-.53.15-.18.2-.3.3-.5.1-.2.05-.37-.03-.52-.08-.15-.68-1.64-.93-2.25-.24-.58-.48-.5-.66-.51l-.57-.01c-.2 0-.52.07-.8.37s-1.05 1.03-1.05 2.5 1.07 2.9 1.23 3.1c.15.2 2.1 3.2 5.1 4.5.71.3 1.26.48 1.69.62.71.23 1.36.2 1.87.12.57-.08 1.78-.73 2.03-1.43.25-.7.25-1.3.18-1.43-.07-.13-.27-.2-.57-.35z"/></svg>
           11 6145-8032
@@ -1731,7 +1849,7 @@
         </div>
 
         <div class="contact-social">
-          <span class="contact-social-label">¡Seguinos!</span>
+          <span class="contact-social-label">Â¡Seguinos!</span>
           <div class="contact-social-icons">
             <a href="https://www.instagram.com/quintas.espacioalvarez" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
               <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg>
@@ -1749,19 +1867,19 @@
   </div>
 </section>
 
-<!-- ═══════ CÓMO LLEGAR ═══════ -->
+<!-- â•â•â•â•â•â•â• CÃ“MO LLEGAR â•â•â•â•â•â•â• -->
 <section class="section como-llegar" id="como-llegar">
   <div class="container">
-    <span class="eyebrow">Ubicación</span>
-    <h2 class="section-title" style="margin-top:20px;">Cómo <em>llegar</em></h2>
+    <span class="eyebrow">UbicaciÃ³n</span>
+    <h2 class="section-title" style="margin-top:20px;">CÃ³mo <em>llegar</em></h2>
     <p class="como-llegar-sub">
-      Alcorta 531, Francisco Álvarez km 44, General Rodríguez, Buenos Aires &nbsp;·&nbsp;
-      <a href="https://www.google.com/maps/place/Alcorta+531,+B1748+General+Rodr%C3%ADguez,+Provincia+de+Buenos+Aires,+Argentina/@-34.5955114,-58.8790449,17z" target="_blank" rel="noopener noreferrer">Abrir en Google Maps →</a>
+      Alcorta 531, Francisco Ãlvarez km 44, General RodrÃ­guez, Buenos Aires &nbsp;Â·&nbsp;
+      <a href="https://www.google.com/maps/place/Alcorta+531,+B1748+General+Rodr%C3%ADguez,+Provincia+de+Buenos+Aires,+Argentina/@-34.5955114,-58.8790449,17z" target="_blank" rel="noopener noreferrer">Abrir en Google Maps â†’</a>
     </p>
     <p style="margin-bottom: 40px;">
       <button class="video-link" onclick="document.getElementById('modalLlegar').classList.add('open')">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8" fill="currentColor" stroke="none"/></svg>
-        Mirá el video para saber cómo llegar
+        MirÃ¡ el video para saber cÃ³mo llegar
       </button>
     </p>
     <div class="mapa-wrap">
@@ -1770,54 +1888,54 @@
         allowfullscreen
         loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"
-        title="Ubicación de Quintas Espacio Álvarez">
+        title="UbicaciÃ³n de Quintas Espacio Ãlvarez">
       </iframe>
     </div>
   </div>
 </section>
 
-<!-- ═══════ FOOTER ═══════ -->
+<!-- â•â•â•â•â•â•â• FOOTER â•â•â•â•â•â•â• -->
 <footer>
   <div class="container">
     <div class="footer-top">
       <div>
         <div class="footer-brand">
-          <img src="assets/logo.png" alt="">
+          <img src="assets/logo.png" alt="Quintas Espacio Ãlvarez" width="52" height="52" loading="lazy" decoding="async">
           <div class="footer-brand-txt">
             Quintas
-            <small>Espacio Álvarez</small>
+            <small>Espacio Ãlvarez</small>
           </div>
         </div>
         <p class="footer-tag">Un espacio pensado para que las celebraciones se sientan en casa.</p>
       </div>
       <div>
-        <h4>Navegación</h4>
+        <h4>NavegaciÃ³n</h4>
         <ul>
           <li><a href="#espacios">Los espacios</a></li>
-          <li><a href="#momentos">Qué celebramos</a></li>
+          <li><a href="#momentos">QuÃ© celebramos</a></li>
           <li><a href="#adicionales">Adicionales</a></li>
-          <li><a href="#galeria">Galería</a></li>
+          <li><a href="#galeria">GalerÃ­a</a></li>
           <li><a href="#contacto">Contacto</a></li>
         </ul>
       </div>
       <div>
         <h4>Contacto</h4>
         <ul>
-          <li>Francisco Álvarez</li>
-          <li>Buenos Aires · Argentina</li>
-          <li><a href="https://wa.me/5491161458032?text=Hola%2C%20me%20gustar%C3%ADa%20consultar%20disponibilidad%20en%20Quintas%20Espacio%20%C3%81lvarez." target="_blank" rel="noopener noreferrer">WhatsApp · 11 6145-8032</a></li>
+          <li>Francisco Ãlvarez</li>
+          <li>Buenos Aires Â· Argentina</li>
+          <li><a href="https://wa.me/5491161458032?text=Hola%2C%20me%20gustar%C3%ADa%20consultar%20disponibilidad%20en%20Quintas%20Espacio%20%C3%81lvarez." target="_blank" rel="noopener noreferrer">WhatsApp Â· 11 6145-8032</a></li>
           <li><a href="mailto:quintas.espacioalvarez@gmail.com">quintas.espacioalvarez@gmail.com</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 Quintas Espacio Álvarez. Todos los derechos reservados.</span>
-      <span>Francisco Álvarez · Buenos Aires · Argentina</span>
+      <span>Â© 2026 Quintas Espacio Ãlvarez. Todos los derechos reservados.</span>
+      <span>Francisco Ãlvarez Â· Buenos Aires Â· Argentina</span>
     </div>
   </div>
 </footer>
 
-<!-- ═══════ WHATSAPP FLOAT ═══════ -->
+<!-- â•â•â•â•â•â•â• WHATSAPP FLOAT â•â•â•â•â•â•â• -->
 <a href="https://wa.me/5491161458032?text=Hola%2C%20me%20gustar%C3%ADa%20consultar%20disponibilidad%20en%20Quintas%20Espacio%20%C3%81lvarez."
    target="_blank" rel="noopener noreferrer"
    class="wa-float" id="waFloat"
@@ -1890,7 +2008,7 @@
     video.play().catch(() => {});
   }
 
-  // ── Galería marquee infinito ──
+  // â”€â”€ GalerÃ­a marquee infinito â”€â”€
   (function () {
     const track = document.getElementById('galTrack');
     Array.from(track.children).forEach(slide => {
@@ -1899,11 +2017,11 @@
   })();
 </script>
 
-<!-- Modal video cómo llegar -->
+<!-- Modal video cÃ³mo llegar -->
 <div class="video-modal" id="modalLlegar">
   <div class="video-modal-inner">
     <button class="video-modal-close" onclick="cerrarModal()" aria-label="Cerrar">&#x2715;</button>
-    <video id="videoLlegar" controls playsinline>
+    <video id="videoLlegar" controls playsinline preload="none">
       <source src="assets/01-como-llegar.mp4" type="video/mp4">
     </video>
   </div>
@@ -1924,5 +2042,48 @@
   });
 </script>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness", "EventVenue"],
+  "name": "Quintas Espacio Ãlvarez",
+  "description": "Quinta para eventos y hospedaje en Francisco Ãlvarez, zona oeste de Buenos Aires. Parque con pileta, quincho, parrilla y 3 habitaciones.",
+  "url": "https://quintas.espacioalvarez.com.ar/",
+  "logo": "https://quintas.espacioalvarez.com.ar/assets/logo.png",
+  "image": [
+    "https://quintas.espacioalvarez.com.ar/assets/pileta-noche.jpg",
+    "https://quintas.espacioalvarez.com.ar/assets/quincho-01.jpg",
+    "https://quintas.espacioalvarez.com.ar/assets/parque-01.jpg"
+  ],
+  "telephone": "+5491161458032",
+  "email": "quintas.espacioalvarez@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Alcorta 531",
+    "addressLocality": "Francisco Ãlvarez",
+    "addressRegion": "Buenos Aires",
+    "addressCountry": "AR"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": -34.5955114,
+    "longitude": -58.8790449
+  },
+  "sameAs": [
+    "https://www.instagram.com/quintas.espacioalvarez",
+    "https://www.facebook.com/profile.php?id=61581590308327",
+    "https://www.tiktok.com/@quintas.espacioalvarez"
+  ],
+  "priceRange": "$$",
+  "amenityFeature": [
+    { "@type": "LocationFeatureSpecification", "name": "Pileta", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Quincho con parrilla", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Habitaciones", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "SalÃ³n cubierto", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Parque", "value": true }
+  ]
+}
+</script>
 </body>
 </html>
+

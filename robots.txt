@@ -1,0 +1,6 @@
+﻿User-agent: *
+Allow: /
+Disallow: /uploads/
+
+Sitemap: https://quintas.espacioalvarez.com.ar/sitemap.xml
+
