@@ -121,10 +121,11 @@ a{color:inherit;text-decoration:none}
 .divider{width:44px;height:1px;background:var(--dorado);border:0;margin-bottom:40px}
 
 /* PHOTO MOSAIC */
-.mosaic{display:grid;grid-template-columns:1.2fr 1fr;grid-template-rows:300px 200px;gap:10px;margin-bottom:52px}
-.mosaic-a{grid-row:1/3}
+.mosaic{display:grid;grid-template-columns:1.2fr 1fr;grid-template-rows:220px 165px 165px;gap:10px;margin-bottom:52px}
+.mosaic-a{grid-row:1/4}
 .mosaic-b{grid-row:1}
 .mosaic-c{grid-row:2}
+.mosaic-d{grid-row:3}
 .mosaic .tile{overflow:hidden;border-radius:3px;background:var(--verde-oscuro)}
 .mosaic .tile img,.mosaic .tile video{width:100%;height:100%;object-fit:cover;transition:transform 1.1s ease}
 .mosaic .tile:hover img{transform:scale(1.05)}
@@ -236,7 +237,7 @@ footer ul li a:hover{color:var(--crema-claro)}
   .nav-links.open a{color:var(--texto-medio);font-size:13px;padding:13px 0;border-bottom:1px solid rgba(184,150,90,.12)}
   .hero{height:60vh;min-height:400px}
   .hero-copy{padding:28px 20px}
-  .mosaic{grid-template-columns:1fr 1fr;grid-template-rows:200px 160px}
+  .mosaic{grid-template-columns:1fr 1fr;grid-template-rows:190px 135px 135px}
   .rooms-grid{grid-template-columns:1fr}
   .usos-grid{grid-template-columns:1fr}
   .tipo-grid{grid-template-columns:repeat(2,1fr)}
@@ -246,10 +247,11 @@ footer ul li a:hover{color:var(--crema-claro)}
   .booking-card{padding:24px 18px}
 }
 @media(max-width:480px){
-  .mosaic{display:grid;grid-template-columns:1fr;grid-template-rows:220px 160px 160px}
+  .mosaic{display:grid;grid-template-columns:1fr;grid-template-rows:220px 160px 160px 160px}
   .mosaic-a{grid-row:1}
   .mosaic-b{grid-row:2}
   .mosaic-c{grid-row:3}
+  .mosaic-d{grid-row:4}
   .hero-chips{display:none}
 }
 </style>
@@ -277,14 +279,14 @@ footer ul li a:hover{color:var(--crema-claro)}
 <!-- HERO -->
 <section class="hero">
   <picture>
-    <source srcset="assets/habitacion-nueva.webp" type="image/webp">
-    <img class="hero-img" src="assets/habitacion-nueva.png" alt="Habitación con camas en Quintas Espacio Álvarez — quinta con hospedaje en zona oeste" fetchpriority="high" decoding="async">
+    <source srcset="assets/parque-dia.webp" type="image/webp">
+    <img class="hero-img" src="assets/parque-dia.jpg" alt="Parque y pileta de Quintas Espacio Álvarez — quinta con hospedaje en Francisco Álvarez" fetchpriority="high" decoding="async">
   </picture>
   <div class="hero-overlay"></div>
   <div class="hero-copy">
     <p class="hero-eyebrow">Quintas Espacio Álvarez · Francisco Álvarez, Acceso Oeste km 44</p>
     <h1 class="hero-title">Quinta con <em>Hospedaje</em><br>en Zona Oeste</h1>
-    <p class="hero-sub">Celebrá, disfrutá el lugar y quedáte a dormir. Un espacio propio a 44 km de Buenos Aires para desconectarse con familia y amigos, sin apuro ni horarios.</p>
+    <p class="hero-sub">Celebrá, disfrutá el lugar y quedáte a dormir. Un espacio propio en Francisco Álvarez (Acceso Oeste km 44) para desconectarse con familia y amigos, sin apuro ni horarios.</p>
     <div class="hero-chips">
       <span class="hero-chip">🛏 3 habitaciones</span>
       <span class="hero-chip">🍳 Cocina completa</span>
@@ -328,6 +330,12 @@ footer ul li a:hover{color:var(--crema-claro)}
         <picture>
           <source srcset="assets/pileta-noche.webp" type="image/webp">
           <img src="assets/pileta-noche.jpg" alt="Pileta iluminada con solárium en la quinta" loading="lazy" decoding="async">
+        </picture>
+      </div>
+      <div class="tile mosaic-d">
+        <picture>
+          <source srcset="assets/habitacion-nueva.webp" type="image/webp">
+          <img src="assets/habitacion-nueva.png" alt="Habitación con camas cómodas — hospedaje en Quintas Espacio Álvarez" loading="lazy" decoding="async">
         </picture>
       </div>
     </div>
