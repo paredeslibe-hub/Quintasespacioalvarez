@@ -82,6 +82,80 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   ]
 }
 </script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Qué incluye el alquiler de la quinta?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El alquiler incluye acceso exclusivo a todo el predio: parque de 260 m² con pileta 10×4 m y solárium, quincho semicubierto de 9,5×4,5 m con parrilla grande, salón cubierto de 7×9,5 m con aire acondicionado frío/calor, cocina completa con vajilla para 20 personas, heladera, freezer, horno, anafe, microondas, cafetera, tostadora y pava eléctrica, Smart TV 55", 2 baños para invitados, 3 habitaciones con colchones nuevos, frazadas y sábanas, 1 baño privado exclusivo para huéspedes, estacionamiento para 20 autos con portón automático y WiFi en todo el predio."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuántas personas entran en la quinta?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La quinta tiene capacidad para hasta 20 personas en los espacios comunes (quincho, salón, parque) y hasta 10 personas para hospedaje en las 3 habitaciones. Es ideal para reuniones familiares, cumpleaños íntimos, almuerzos de fin de semana y escapadas con amigos."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Dónde está ubicada la quinta?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La quinta está ubicada en Alcorta 531, Francisco Álvarez, a 44 km de Buenos Aires por el Acceso Oeste (Autopista del Oeste). Desde Capital Federal el acceso es directo por la ruta, sin tráfico intenso de fin de semana hacia el interior. Francisco Álvarez pertenece al partido de General Rodríguez, provincia de Buenos Aires."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Se puede quedar a dormir en la quinta?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. La quinta tiene 3 habitaciones con colchones nuevos, frazadas, sábanas y almohadas. Hay 1 baño privado exclusivo para los huéspedes que se alojan. La capacidad máxima de hospedaje es de hasta 10 personas. Cada habitación tiene placard, ventilador y aire acondicionado frío/calor."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Hacen fiestas o eventos nocturnos?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Quintas Espacio Álvarez es un espacio orientado al descanso y las celebraciones tranquilas de día: cumpleaños íntimos, almuerzos familiares, reuniones de fin de semana, escapadas y hospedaje. No aceptamos fiestas nocturnas de gran escala ni reuniones multitudinarias, para preservar la tranquilidad del lugar y del entorno."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Tienen pileta disponible todo el año?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La pileta de 10×4 m con playa húmeda está disponible principalmente en temporada de verano y en los meses de clima cálido. Para consultas sobre disponibilidad en épocas específicas, escribinos por WhatsApp al 11 6145-8032 o por email a quintas.espacioalvarez@gmail.com."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Con cuánta anticipación hay que reservar?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Recomendamos reservar con al menos 2 semanas de anticipación, especialmente para fines de semana y fechas especiales. Para las vacaciones de invierno (julio) y el verano, los fines de semana se completan con bastante anticipación. Para consultar disponibilidad sin compromiso, escribinos por WhatsApp al 11 6145-8032."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cómo se hace para reservar?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La forma más rápida es escribirnos por WhatsApp al 11 6145-8032. Respondemos en menos de 24 horas hábiles. Repasamos fechas disponibles, capacidad necesaria y armamos juntos la propuesta. También podés escribirnos por email a quintas.espacioalvarez@gmail.com."
+      }
+    }
+  ]
+}
+</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Quicksand:wght@300;400;500;600&display=swap">
@@ -1246,7 +1320,53 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   }
   .video-modal-close:hover { background: rgba(0,0,0,0.9); }
 
-  /* ───── RESPONSIVE ───── */
+  /* ───── FAQ ───── */
+  .faq { background: var(--crema-profundo); }
+  .faq-list { max-width: 820px; }
+  .faq-item {
+    border-bottom: 1px solid var(--crema-dorado);
+  }
+  .faq-item:first-child { border-top: 1px solid var(--crema-dorado); }
+  .faq-q {
+    width: 100%;
+    background: transparent;
+    border: 0;
+    text-align: left;
+    padding: 28px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    cursor: pointer;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--verde-oscuro);
+    line-height: 1.2;
+  }
+  .faq-q:hover { color: var(--verde-medio); }
+  .faq-icon {
+    flex-shrink: 0;
+    width: 28px; height: 28px;
+    border: 1px solid var(--crema-dorado);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--dorado);
+    transition: transform .3s, background .3s;
+  }
+  .faq-item.open .faq-icon { transform: rotate(45deg); background: var(--dorado); color: white; border-color: var(--dorado); }
+  .faq-a {
+    font-size: 15px;
+    color: var(--texto-medio);
+    line-height: 1.85;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .45s ease, padding .3s;
+    padding-bottom: 0;
+  }
+  .faq-item.open .faq-a { max-height: 400px; padding-bottom: 28px; }
+
+  /* ───── RESPONSIVE ─────*/
   @media (max-width: 900px) {
     .section { padding: 80px 0; }
     .nav-cta { display: none; }
@@ -1951,6 +2071,83 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
+<!-- ═══════ FAQ ═══════ -->
+<section class="section faq" id="faq">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Preguntas frecuentes</span>
+      <h2 class="section-title" style="margin-top:20px;">Todo lo que querés<br>saber antes de <em>reservar</em></h2>
+    </div>
+    <div class="faq-list">
+
+      <div class="faq-item reveal">
+        <button class="faq-q" aria-expanded="false">
+          ¿Qué incluye el alquiler de la quinta?
+          <span class="faq-icon" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 1v10M1 6h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+        </button>
+        <div class="faq-a">El alquiler incluye acceso exclusivo a todo el predio: parque de 260 m² con pileta 10×4 m y solárium, quincho semicubierto de 9,5×4,5 m con parrilla grande, salón cubierto de 7×9,5 m con aire acondicionado frío/calor, cocina completa con vajilla para 20 personas, heladera, freezer, horno, anafe, microondas, cafetera y pava eléctrica, Smart TV 55", 2 baños para invitados, 3 habitaciones con colchones nuevos, frazadas y sábanas, 1 baño privado exclusivo para huéspedes, estacionamiento para 20 autos con portón automático y WiFi en todo el predio.</div>
+      </div>
+
+      <div class="faq-item reveal">
+        <button class="faq-q" aria-expanded="false">
+          ¿Cuántas personas entran en la quinta?
+          <span class="faq-icon" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 1v10M1 6h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+        </button>
+        <div class="faq-a">La quinta tiene capacidad para hasta 20 personas en los espacios comunes (quincho, salón, parque) y hasta 10 personas para hospedaje en las 3 habitaciones. Es ideal para reuniones familiares, cumpleaños íntimos, almuerzos de fin de semana y escapadas con amigos.</div>
+      </div>
+
+      <div class="faq-item reveal">
+        <button class="faq-q" aria-expanded="false">
+          ¿Dónde está ubicada la quinta?
+          <span class="faq-icon" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 1v10M1 6h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+        </button>
+        <div class="faq-a">En Alcorta 531, Francisco Álvarez, a 44 km de Buenos Aires por el Acceso Oeste (Autopista del Oeste). Desde Capital Federal el acceso es directo por la ruta. Francisco Álvarez pertenece al partido de General Rodríguez, provincia de Buenos Aires.</div>
+      </div>
+
+      <div class="faq-item reveal">
+        <button class="faq-q" aria-expanded="false">
+          ¿Se puede quedar a dormir en la quinta?
+          <span class="faq-icon" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 1v10M1 6h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+        </button>
+        <div class="faq-a">Sí. La quinta tiene 3 habitaciones con colchones nuevos, frazadas, sábanas y almohadas. Hay 1 baño privado exclusivo para los huéspedes que se alojan. La capacidad máxima de hospedaje es de hasta 10 personas. Cada habitación tiene placard, ventilador y aire acondicionado frío/calor.</div>
+      </div>
+
+      <div class="faq-item reveal">
+        <button class="faq-q" aria-expanded="false">
+          ¿Hacen fiestas o eventos nocturnos?
+          <span class="faq-icon" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 1v10M1 6h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+        </button>
+        <div class="faq-a">No. Quintas Espacio Álvarez es un espacio orientado al descanso y las celebraciones tranquilas de día: cumpleaños íntimos, almuerzos familiares, reuniones de fin de semana, escapadas y hospedaje. No aceptamos fiestas nocturnas de gran escala ni reuniones multitudinarias.</div>
+      </div>
+
+      <div class="faq-item reveal">
+        <button class="faq-q" aria-expanded="false">
+          ¿Con cuánta anticipación hay que reservar?
+          <span class="faq-icon" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 1v10M1 6h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+        </button>
+        <div class="faq-a">Recomendamos reservar con al menos 2 semanas de anticipación, especialmente para fines de semana y fechas especiales. Para las vacaciones de invierno (julio) y el verano, los fines de semana se completan con bastante anticipación. Para consultar disponibilidad sin compromiso, escribinos por WhatsApp al 11 6145-8032.</div>
+      </div>
+
+      <div class="faq-item reveal">
+        <button class="faq-q" aria-expanded="false">
+          ¿Tienen pileta disponible todo el año?
+          <span class="faq-icon" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 1v10M1 6h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+        </button>
+        <div class="faq-a">La pileta de 10×4 m con playa húmeda está disponible principalmente en temporada de verano y meses de clima cálido. Para consultas sobre disponibilidad en épocas específicas o para eventos de invierno, escribinos por WhatsApp al 11 6145-8032.</div>
+      </div>
+
+      <div class="faq-item reveal">
+        <button class="faq-q" aria-expanded="false">
+          ¿Cómo se hace para reservar?
+          <span class="faq-icon" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 1v10M1 6h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+        </button>
+        <div class="faq-a">La forma más rápida es escribirnos por WhatsApp al 11 6145-8032. Respondemos en menos de 24 horas hábiles. Repasamos fechas disponibles, capacidad y armamos la propuesta juntos. También podés escribirnos a quintas.espacioalvarez@gmail.com.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <!-- ═══════ FOOTER ═══════ -->
 <footer>
   <div class="container">
@@ -1973,6 +2170,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <li><a href="#adicionales">Adicionales</a></li>
           <li><a href="#galeria">Galería</a></li>
           <li><a href="#contacto">Contacto</a></li>
+          <li><a href="/vacacionesdeinvierno">Vacaciones de Invierno</a></li>
         </ul>
       </div>
       <div>
@@ -2058,6 +2256,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     wa.classList.add('hint');
     setTimeout(() => wa.classList.remove('hint'), 3600);
   }, 2200);
+
+  // FAQ accordion
+  document.querySelectorAll('.faq-q').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.closest('.faq-item');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(el => {
+        el.classList.remove('open');
+        el.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+      });
+      if (!isOpen) {
+        item.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
 
   // Make sure the hero video tries to autoplay on mobile Safari
   const video = document.querySelector('.hero-video');
